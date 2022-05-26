@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+$theme-colors: (
+  "primary": #4c9be8,
+  "secondary": #4e5d6c,
+  "success": #5cb85c,
+  "info": #5bc0de,
+  "warning":  #ffc107,
+  "danger": #d9534f,
+  "light": #abb6c2,
+  "dark": #20374c,
+);
+
+@import '~bootstrap/scss/bootstrap.scss';

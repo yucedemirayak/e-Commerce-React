@@ -72,16 +72,16 @@ const Header = () => {
 
           {/* //TODO: logine göre tasarım  */}
           {/* If user not login in >>>>> */}
-          {/* <div className="text-end">
+          <div className="text-end">
             <button type="button" className="btn btn-outline-light me-2">
               Login
             </button>
             <button type="button" className="btn btn-warning">
               Sign-up
             </button>
-          </div> */}
+          </div>
           {/* If user loginED in >>>>>  */}
-        <div class="dropdown text-end">
+        {/* <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="mdo" class="rounded-circle" width="32" height="32"/>
           </a>
@@ -92,7 +92,7 @@ const Header = () => {
             <li><hr class="dropdown-divider"/></li>
             <li><a class="dropdown-item" href="#">Sign out</a></li>
           </ul>
-        </div>
+        </div> */}
        
         </div>
       </div>
