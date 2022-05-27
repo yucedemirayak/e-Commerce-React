@@ -3,6 +3,9 @@ import "./Header.scss";
 import { FaOpencart } from "react-icons/fa";
 import { RiHomeLine, RiDashboardLine } from "react-icons/ri";
 import { IconContext } from "react-icons";
+import SearchAnimation from "../SearchAnimation/SearchAnimation";
+import IconGenerator from "../IconGenerator";
+
 
 const CompanyLogo = () => {
   return (
@@ -28,47 +31,26 @@ const Header = () => {
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
               <a href="#" className="nav-link text-secondary">
-                <RiHomeLine
-                  className="bi d-block mx-auto mb-1"
-                  width="24"
-                  height="24"
-                />
+                <IconGenerator _iconName="house" className="bi d-block mx-auto mb-1" />
+
                 Home
               </a>
             </li>
             <li>
               <a href="#" className="nav-link text-white">
-                <RiDashboardLine
-                  className="bi d-block mx-auto mb-1"
-                  width="24"
-                  height="24"
-                />
+              <IconGenerator _iconName="edit" className="bi d-block mx-auto mb-1" />
                 Categories
               </a>
             </li>
             <li>
               <a href="#" className="nav-link text-white">
-                <RiDashboardLine
-                  className="bi d-block mx-auto mb-1"
-                  width="24"
-                  height="24"
-                />
+              <IconGenerator _iconName="edit" className="bi d-block mx-auto mb-1" />
                 Stores
               </a>
             </li>
           </ul>
 
-          <form
-            className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
-            role="search"
-          >
-            <input
-              type="search"
-              className="form-control form-control "
-              placeholder="Search..."
-              aria-label="Search"
-            />
-          </form>
+          {/* <SearchAnimation className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"/> */}
 
           {/* //TODO: logine göre tasarım  */}
           {/* If user not login in >>>>> */}
@@ -93,7 +75,6 @@ const Header = () => {
             <li><a class="dropdown-item" href="#">Sign out</a></li>
           </ul>
         </div> */}
-       
         </div>
       </div>
     </header>

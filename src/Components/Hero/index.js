@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="2000">
             <img
-              src="./imagesForTest/pexels-photomix-company-230544.jpg"
+              src="./images/pexels-photomix-company-230544.jpg"
               className="d-block w-100"
               alt="..."
             />
