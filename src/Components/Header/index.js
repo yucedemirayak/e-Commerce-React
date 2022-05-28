@@ -1,15 +1,19 @@
 import React from "react";
 import "./Header.scss";
 import { FaOpencart } from "react-icons/fa";
-import { RiHomeLine, RiDashboardLine } from "react-icons/ri";
+import {
+  RiSearchLine,
+  RiUserLine,
+  RiHeartLine,
+  RiShoppingCartLine,
+} from "react-icons/ri";
 import { IconContext } from "react-icons";
 import SearchAnimation from "../SearchAnimation/SearchAnimation";
 import IconGenerator from "../IconGenerator";
 
-
 const CompanyLogo = () => {
   return (
-    <IconContext.Provider value={{ size: "70px" }}>
+    <IconContext.Provider value={{ size: "60px" }}>
       <div>
         <FaOpencart />
       </div>
@@ -19,33 +23,50 @@ const CompanyLogo = () => {
 
 const Header = () => {
   return (
-    <header className="p-3 bg-primary container-fluid">
-      <div className="container">
-        <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <header className="p-3">
+      <div className="container bg-warning">
+        <div className=" bg-primary d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a
             href="/"
-            className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+            className="d-flex align-items-center mb-2 mb-lg-0 mx-2 text-white text-decoration-none"
           >
             <CompanyLogo />
           </a>
-          <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li>
-              <a href="#" className="nav-link text-secondary">
-                <IconGenerator _iconName="house" className="bi d-block mx-auto mb-1" />
 
-                Home
+          <form
+            className="bg-success flex-fill d-flex align-items-center col-11 col-lg-auto mx-3 mb-3 mb-lg-0 me-lg-3"
+            role="search"
+          >
+            <input
+              type="search"
+              className="form-control form-control-dark text-white bg-dark"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+            <div>
+              {" "}
+              <RiSearchLine className="mx-2 mb-1 border" />{" "}
+            </div>
+          </form>
+
+          <ul className="bg-danger nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+            <li>
+              <a href="#" className="nav-link text-white bg-info">
+                <RiUserLine className="mx-1 mb-1" />
+                Login
+              </a>
+            </li>
+
+            <li>
+              <a href="#" className="nav-link text-white bg-warning ">
+                <RiHeartLine className="mx-1 mb-1" />
+                Favorites
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link text-white">
-              <IconGenerator _iconName="edit" className="bi d-block mx-auto mb-1" />
-                Categories
-              </a>
-            </li>
-            <li>
-              <a href="#" className="nav-link text-white">
-              <IconGenerator _iconName="edit" className="bi d-block mx-auto mb-1" />
-                Stores
+              <a href="#" className="nav-link text-white bg-success">
+                <RiShoppingCartLine className="mx-1 mb-1" />
+                Cart
               </a>
             </li>
           </ul>
@@ -54,16 +75,9 @@ const Header = () => {
 
           {/* //TODO: logine göre tasarım  */}
           {/* If user not login in >>>>> */}
-          <div className="text-end">
-            <button type="button" className="btn btn-outline-light me-2">
-              Login
-            </button>
-            <button type="button" className="btn btn-warning">
-              Sign-up
-            </button>
-          </div>
+
           {/* If user loginED in >>>>>  */}
-        {/* <div class="dropdown text-end">
+          {/* <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="mdo" class="rounded-circle" width="32" height="32"/>
           </a>
