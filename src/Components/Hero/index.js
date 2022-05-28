@@ -5,14 +5,14 @@ const Hero = () => {
   return (
     <div className="d-flex align-items-center justify-content-center bg-info ">
       <div
-        id="carouselExampleDark"
-        className="carousel carousel-dark slide"
+        id="carouselExample"
+        className="carousel carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselExampleDark"
+            data-bs-target="#carouselExample"
             data-bs-slide-to="0"
             className="active"
             aria-current="true"
@@ -20,7 +20,7 @@ const Hero = () => {
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleDark"
+            data-bs-target="#carouselExample"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
@@ -57,7 +57,7 @@ const Hero = () => {
         <button
           className="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExample"
           data-bs-slide="prev"
         >
           <span
@@ -69,7 +69,7 @@ const Hero = () => {
         <button
           className="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExample"
           data-bs-slide="next"
         >
           <span
