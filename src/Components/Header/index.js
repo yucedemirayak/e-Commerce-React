@@ -43,7 +43,7 @@ const Header = () => {
               aria-label="Search"
             />
             <div>
-              <Link to={"./Login"} className="nav-link">
+              <Link to={"./Search"} className="nav-link">
                 <RiSearchLine className="mx-2 mb-1 border" />
               </Link>
             </div>

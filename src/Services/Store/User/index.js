@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { _setEmail, _setPassword } from "../../Actions/User";
+import { _setEmail, _setPassword } from "./userActions.js";
+
 
 export const userStore = createSlice({
     name: "user",
@@ -11,7 +12,7 @@ export const userStore = createSlice({
     },
     reducers: {
         setUserEmail: _setEmail,
-        setUserPassword: _setPassword
+        setUserPassword: _setPassword,
     },
     // extraReducers: {
 
