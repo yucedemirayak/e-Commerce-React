@@ -18,8 +18,9 @@ const PageRoutes = () => {
           <Route exact path="/Login" element={<Login />} />
           <Route exact path="/Favorites" element={<Favorites />} />
           <Route exact path="/Cart" element={<Cart />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
-        <Route path="*" element={<PageNotFound />} />
+       
       </Routes>
     </Router>
   );
