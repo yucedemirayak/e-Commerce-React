@@ -7,7 +7,7 @@ import Favorites from "../../Pages/Favorites";
 import Search from "../../Pages/Search";
 import Cart from "../../Pages/Cart";
 import PageNotFound from "../../Pages/PageNotFound";
-import RequireAuth from "./requireAuth";
+// import RequireAuth from "./requireAuth";
 const PageRoutes = () => {
   return (
     <Router>
@@ -24,5 +24,6 @@ const PageRoutes = () => {
     </Router>
   );
 };
+
 
 export default PageRoutes;
