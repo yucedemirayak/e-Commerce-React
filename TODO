@@ -9,3 +9,7 @@ Yuce:
 
 ChangeLog:
      ✔ RequireAuth eklendi @done(22-05-30 09:46)
+
+Git:
+  ☐ ----Remote development'dan local feature/<featurename> fetch işlemi
+  ☐ git fetch origin development:feature/<featurename>
