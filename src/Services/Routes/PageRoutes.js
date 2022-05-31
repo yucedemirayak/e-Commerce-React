@@ -7,6 +7,7 @@ import Favorites from "../../Pages/Favorites";
 import Search from "../../Pages/Search";
 import Cart from "../../Pages/Cart";
 import PageNotFound from "../../Pages/PageNotFound";
+import SignUp from "../../Pages/SignUp";
 // import RequireAuth from "./requireAuth";
 const PageRoutes = () => {
   return (
@@ -18,8 +19,10 @@ const PageRoutes = () => {
           <Route exact path="/Login" element={<Login />} />
           <Route exact path="/Favorites" element={<Favorites />} />
           <Route exact path="/Cart" element={<Cart />} />
+          <Route exact path="/SignUp" element={<SignUp/>} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
-        <Route path="*" element={<PageNotFound />} />
+       
       </Routes>
     </Router>
   );
