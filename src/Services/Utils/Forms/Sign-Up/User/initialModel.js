@@ -1,6 +1,6 @@
 export const SingUpUserModel = {
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     rePassword: "",
