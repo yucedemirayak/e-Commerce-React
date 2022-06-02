@@ -1,0 +1,57 @@
+.side-bar-container {
+  position: absolute;
+  height: 100vh;
+}
+span {
+  color: black;
+}
+.side-bar {
+  position: sticky;
+  z-index: 10;
+  top: 10px;
+  .card {
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .card-body {
+    width: max-content;
+  }
+  img {
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    text-align: start;
+
+    li {
+      li {
+        margin-left: 20px;
+        margin-top: 5px;
+        text-decoration: none;
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.img-container:hover {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-180deg);
+}

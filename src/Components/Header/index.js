@@ -12,8 +12,8 @@ import { IconContext } from "react-icons";
 
 const CompanyLogo = () => {
   return (
-    <IconContext.Provider value={{ size: "60px" }}>
-      <div>
+    <IconContext.Provider className="" value={{ size: "40px" } }>
+      <div className="text-white">
         <FaOpencart />
       </div>
     </IconContext.Provider>
@@ -28,8 +28,10 @@ const Header = () => {
           <Link
             to={"./"}
             className="d-flex align-items-center mb-2 mb-lg-0 mx-2  text-decoration-none"
-          >
-            <CompanyLogo />
+          ><div className="position-relative d-flex align-items-center justify-content-center">
+          <img className="blackhole " height="180px"src="./imagesForTest/blackhole.svg"></img><CompanyLogo className=""/>
+          </div>
+            
           </Link>
 
           <form

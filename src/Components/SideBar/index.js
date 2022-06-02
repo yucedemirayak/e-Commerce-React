@@ -1,68 +1,460 @@
-import React from 'react'
-
-const index = () => {
+import React, {useEffect} from "react";
+import { Link } from "react-router-dom";
+import "../SideBar/SideBar.scss";
+import {
+  RiMenuFoldLine
+} from "react-icons/ri";
+import { IconContext } from "react-icons";
+const MenuLogo = () => {
   return (
-    <div className="flex-shrink-0 p-3 bg-white" >
-    <a to="" className="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-      <svg className="bi pe-none me-2" width="30" height="24"></svg>
-      <span className="fs-5 fw-semibold">Collapsible</span>
-    </a>
-    <ul className="list-unstyled ps-0">
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-          Home
-        </button>
-        <div className="collapse show" id="home-collapse">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
-          </ul>
-        </div>
-      </li>
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-          Dashboard
-        </button>
-        <div className="collapse" id="dashboard-collapse" >
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
-          </ul>
-        </div>
-      </li>
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-          Orders
-        </button>
-        <div className="collapse" id="orders-collapse">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">New</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Processed</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Shipped</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Returned</a></li>
-          </ul>
-        </div>
-      </li>
-      <li className="border-top my-3"></li>
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-          Account
-        </button>
-        <div className="collapse" id="account-collapse">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">New...</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Profile</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
-            <li><a to="#" className="link-dark d-inline-flex text-decoration-none rounded">Sign out</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </div>
-  )
-}
+    <IconContext.Provider className="" value={{ size: "20px" } }>
+      <div className="text-white position-absolute d-flex align-items-center justify-content-center">
+        <RiMenuFoldLine />
+      </div>
+    </IconContext.Provider>
+  );
+};
+const Index = () => {
 
-export default index
+  return (
+    <div className="side-bar-container">
+    <div className="d-flex p-3 side-bar">
+      <div className="collapse collapse-horizontal" id="categories-collapse"  >
+    <div className="card card-body">
+      <Link
+       
+        to=""
+        className="d-flex align-items-center justify-content-start  text-decoration-none border-bottom"
+      >
+        
+        <span className="fs-5 mb-2 fw-semibold">Categories</span>
+        
+      </Link>
+      
+      <ul className="list-unstyled ps-0 m-0" >
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#fashion-collapse"
+            aria-expanded="true"
+          >
+            Fashion
+          </button>
+          <div className="collapse " id="fashion-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Weekly
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Monthly
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Annually
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#electronics-collapse"
+            aria-expanded="true"
+          >
+            Electronics
+          </button>
+          <div className="collapse " id="electronics-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Reports
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#home-and-living-collapse"
+            aria-expanded="true"
+          >
+            Home and Living
+          </button>
+          <div className="collapse " id="home-and-living-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Reports
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#baby-collapse"
+            aria-expanded="true"
+          >
+            Baby
+          </button>
+          <div className="collapse " id="baby-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Reports
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#beauty-and-care-collapse"
+            aria-expanded="true"
+          >
+            Beauty and Personal Care
+          </button>
+          <div className="collapse " id="beauty-and-care-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Reports
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#jewelry-and-watches-collapse"
+            aria-expanded="true"
+          >
+            Jewelry and Watches
+          </button>
+          <div className="collapse " id="jewelry-and-watches-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Reports
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#sports-and-outdoors-collapse"
+            aria-expanded="false"
+          >
+            Sports and Outdoors
+          </button>
+          <div className="collapse" id="sports-and-outdoors-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  New
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Processed
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Shipped
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Returned
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#book-music-movie-game-collapse"
+            aria-expanded="true"
+          >
+            Book, Music, Movie, Game
+          </button>
+          <div className="collapse " id="book-music-movie-game-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Reports
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#automotive-collapse"
+            aria-expanded="true"
+          >
+            Automotive and Motorcycle
+          </button>
+          <div className="collapse " id="automotive-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Reports
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li className="border-top my-3"></li>
+        <li className="mb-1">
+          <button
+            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#account-collapse"
+            aria-expanded="false"
+          >
+            Account
+          </button>
+          <div className="collapse" id="account-collapse">
+            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  New...
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Settings
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  Sign out
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </div>
+    <div onClick={()=>{}} className="img-container" id="img-container"
+    data-bs-toggle="collapse" 
+    data-bs-target="#categories-collapse"
+    aria-expanded="false"
+    aria-controls="categories-collapse">
+<MenuLogo id="menu-icon"/>
+    <img 
+       className="" height="80px"src="./imagesForTest/blackhole.svg"></img>
+       </div>
+    </div>
+    </div>
+  );
+};
+
+export default Index;
