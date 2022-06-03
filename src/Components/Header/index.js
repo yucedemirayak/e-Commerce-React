@@ -24,16 +24,17 @@ const Header = () => {
   return (
     <header className="p-3">
       <div className="container">
+        
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <Link
             to={"./"}
             className="d-flex align-items-center mb-2 mb-lg-0 mx-2  text-decoration-none"
-          ><div className="position-relative d-flex align-items-center justify-content-center">
+          ><div className="header-img-container position-relative d-flex align-items-center justify-content-center">
           <img className="blackhole " height="180px"src="./imagesForTest/blackhole.svg"></img><CompanyLogo className=""/>
           </div>
             
           </Link>
-
+          <img className="blackhole-big " height="1800px"src="./imagesForTest/blackhole.svg"></img>
           <form
             className="flex-fill d-flex align-items-center col-11 col-lg-auto mx-3 mb-3 mb-lg-0 me-lg-3"
             role="search"
