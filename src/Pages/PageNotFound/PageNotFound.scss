@@ -5,16 +5,27 @@
 	padding: 0;
 }
 .not-found-container{
-    background-color: rgb(255, 255, 255);
-    display: flex;
+   
+	display: flex;
     justify-content: center;
     align-items: center;
-   padding-top: 100px;
-   padding-bottom: 100px;
+    }
+.figure-container{
+	margin: 70px;
+	padding: 100px;
+	
+	border: 5px solid black ;
+	
+	background-color: rgba(255, 255, 255, 0.822);
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 /* I. Containers */
 figure {
+	border-radius: 50%;
+	
+	
     color: rgb(255, 255, 255);
 	font-size: 6px;
 	position: relative;

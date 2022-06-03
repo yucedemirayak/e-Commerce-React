@@ -4,7 +4,9 @@ import '../PageNotFound/PageNotFound.scss';
 const PageNotFound = () => {
   return (
    <section className="not-found-container">
-    <figure>
+      <div className='figure-container'>
+    <figure className=''>
+     
     <div className="sad-mac"></div>
     <figcaption>
       <span className="sr-text">Error 404: Not Found</span>
@@ -24,8 +26,12 @@ const PageNotFound = () => {
       <span className="u"></span>
       <span className="n"></span>
       <span className="d"></span>
+      
     </figcaption>
-  </figure></section>
+    
+  </figure>
+  </div>
+  </section>
   )
 }
 
