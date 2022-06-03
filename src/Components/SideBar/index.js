@@ -19,7 +19,7 @@ const Index = () => {
   return (
     <div className="side-bar-container">
     <div className="d-flex p-3 side-bar">
-      <div className="collapse collapse-horizontal" id="categories-collapse"  >
+      <div className="collapse-horizontal show" id="categories-collapse"  >
     <div className="card card-body">
       <Link
        
@@ -37,7 +37,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#fashion-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Fashion
           </button>
@@ -83,7 +83,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#electronics-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Electronics
           </button>
@@ -121,7 +121,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#home-and-living-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Home and Living
           </button>
@@ -159,7 +159,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#baby-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Baby
           </button>
@@ -198,7 +198,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#beauty-and-care-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Beauty and Personal Care
           </button>
@@ -237,7 +237,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#jewelry-and-watches-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Jewelry and Watches
           </button>
@@ -321,7 +321,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#book-music-movie-game-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Book, Music, Movie, Game
           </button>
@@ -359,7 +359,7 @@ const Index = () => {
             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
             data-bs-toggle="collapse"
             data-bs-target="#automotive-collapse"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             Automotive and Motorcycle
           </button>
@@ -443,15 +443,17 @@ const Index = () => {
       </ul>
       </div>
     </div>
-    <div onClick={()=>{}} className="img-container" id="img-container"
+    <button type="button" className="img-container" id="img-container"
     data-bs-toggle="collapse" 
     data-bs-target="#categories-collapse"
-    aria-expanded="false"
-    aria-controls="categories-collapse">
+    aria-expanded="true"
+    aria-controls="categories-collapse"
+    
+    >
 <MenuLogo id="menu-icon"/>
     <img 
        className="" height="80px"src="./imagesForTest/blackhole.svg"></img>
-       </div>
+       </button>
     </div>
     </div>
   );
