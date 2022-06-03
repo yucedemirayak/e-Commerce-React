@@ -3,8 +3,11 @@ Cagdas:
     ✔  Favicon iconunu değiştir @done(22-06-01 19:24)
     ☐  Favicon iconunu değiştir
     ☐ Forgot password Modal
+<<<<<<< HEAD
     ☐ Categori okları > ∨
 
+=======
+>>>>>>> feature/yuce
     Pages:
       ☐ login
       ☐ signup standart
