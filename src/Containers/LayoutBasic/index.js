@@ -1,15 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../../Components/Footer";
+import Test from "../../Components/Footer/test";
 import Header from "../../Components/Header";
-import SearchAnimation from "../../Components/SearchAnimation/SearchAnimation";
+import SideBar from "../../Components/SideBar/"
+
 
 const LayoutBasic = ({ children }) => {
   return (
     <>
       <Header />
+      <SideBar/>
       <Outlet />
-      <Footer />
+      <Test />
     </>
   );
 };

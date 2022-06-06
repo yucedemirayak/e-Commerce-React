@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../LoginModal/LoginModal.scss";
+import "../LoginModal/loginModal.scss";
 
 const LoginModal = () => {
   return (

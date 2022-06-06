@@ -4,7 +4,8 @@ import { Genders } from "../../Services/Utils/Enums/Gender/genders";
 // import { useDispatch } from "react-redux";
 import { SingUpUserModel } from "../../Services/Utils/Forms/Sign-Up/User/initialModel";
 import { SignUpUserValidationScheme } from "../../Services/Utils/Forms/Sign-Up/User/validationScheme";
-import "../SignUpModal/SignUpModal.scss";
+
+import "../SignUpModal/signUpModal.scss";
 
 const SignUpModal = () => {
   // const dispatch = useDispatch();

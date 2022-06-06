@@ -1,5 +1,6 @@
 import React from "react";
-import "./Hero.scss";
+import "../Hero/hero.scss";
+import { IconContext } from "react-icons";
 
 const Hero = () => {
   return (

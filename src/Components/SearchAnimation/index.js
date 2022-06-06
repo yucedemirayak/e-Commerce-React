@@ -1,5 +1,5 @@
 import React from 'react';
-import './searchAnimation.scss';
+import './index.scss';
 
 const SearchAnimation = () => {
   return (

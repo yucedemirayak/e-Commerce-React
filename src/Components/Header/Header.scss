@@ -1,3 +1,8 @@
+.blackhole-footer {
+  position: absolute;
+ z-index: -1;
+  // left:-100%;
+}
 .blackhole {
   position: absolute;
   z-index: -1;
@@ -36,37 +41,6 @@
 #search-btn:hover {
 }
 
-@media only screen and (max-width: 515px) {
-  .blackhole-big {
-    position: absolute;
-    z-index: -1;
-
-    width: 900px;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .blackhole-big {
-    position: absolute;
-    z-index: -1;
-
-    width: 1000px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .blackhole-big {
-    position: absolute;
-    z-index: -1;
-    height: 1400px;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .blackhole-big {
-    position: absolute;
-    z-index: -1;
-    height: 1600px;
-  }
-}
 .rotatex {
   animation: rotation 8s infinite linear;
 }

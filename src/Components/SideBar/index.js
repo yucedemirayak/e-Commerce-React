@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
-import "../SideBar/SideBar.scss";
+import "../SideBar/sideBar.scss";
 import {
   RiMenuFoldLine
 } from "react-icons/ri";
@@ -14,7 +14,7 @@ const MenuLogo = () => {
     </IconContext.Provider>
   );
 };
-const Index = () => {
+const SideBar = () => {
 
   return (
     <div className="side-bar-container">
@@ -459,4 +459,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default SideBar;
