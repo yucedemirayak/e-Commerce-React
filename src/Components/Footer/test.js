@@ -94,7 +94,7 @@ const test = () => {
               <img
                 className="blackhole-footer rotatex"
                 height="180px"
-                src="./imagesForTest/blackhole.svg"
+                src="./image/blackhole.svg"
               ></img>
               <CompanyLogo className="" />
             </div> 

@@ -1,13 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../SideBar/SideBar.scss";
-import {
-  RiMenuFoldLine
-} from "react-icons/ri";
+import { RiMenuFoldLine } from "react-icons/ri";
 import { IconContext } from "react-icons";
 const MenuLogo = () => {
   return (
-    <IconContext.Provider className="" value={{ size: "20px" } }>
+    <IconContext.Provider className="" value={{ size: "20px" }}>
       <div className="text-white position-absolute d-flex align-items-center justify-content-center">
         <RiMenuFoldLine />
       </div>
@@ -15,458 +13,607 @@ const MenuLogo = () => {
   );
 };
 const SideBar = () => {
-
   return (
     <div className="side-bar-container">
-    <div className="d-flex p-3 side-bar">
-      <div className="collapse-horizontal show" id="categories-collapse"  >
-    <div className="card card-body">
-      <Link
-       
-        to=""
-        className="d-flex align-items-center justify-content-start  text-decoration-none border-bottom"
-      >
-        
-        <span className="fs-5 mb-2 fw-semibold">Categories</span>
-        
-      </Link>
-      
-      <ul className="list-unstyled ps-0 m-0" >
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#fashion-collapse"
-            aria-expanded="false"
-          >
-            Fashion
-          </button>
-          <div className="collapse " id="fashion-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Men
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Women
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Kids
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                   Watches and Jewellery
-                </Link>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                 Luggages
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#electronics-collapse"
-            aria-expanded="false"
-          >
-            Electronics
-          </button>
-          <div className="collapse " id="electronics-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  SmartPhones and Accessories
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Computers and Tablets
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  TVs, Sound and Visual Systems
-                </Link>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  TVs, Sound and Visual Systems
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#home-and-living-collapse"
-            aria-expanded="false"
-          >
-            Home and Living
-          </button>
-          <div className="collapse " id="home-and-living-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Overview
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Updates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Reports
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#baby-collapse"
-            aria-expanded="false"
-          >
-            Baby
-          </button>
-          <div className="collapse " id="baby-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Overview
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Updates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Reports
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
+      <div className="d-flex p-3 side-bar">
+        <div className="collapse-horizontal show" id="categories-collapse">
+          <div className="card sidebar-card card-body card-body-sidebar">
+            <Link
+              to=""
+              className="d-flex align-items-center justify-content-start  text-decoration-none border-bottom"
+            >
+              <span className="fs-5 mb-2 fw-semibold">Categories</span>
+            </Link>
 
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#beauty-and-care-collapse"
-            aria-expanded="false"
-          >
-            Beauty and Personal Care
-          </button>
-          <div className="collapse " id="beauty-and-care-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
+            <ul className="list-unstyled ps-0 m-0">
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fashion-collapse"
+                  aria-expanded="false"
                 >
-                  Overview
-                </Link>
+                  Fashion
+                </button>
+                <div className="collapse " id="fashion-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Women
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Men
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Kids
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Baby Clothing and Accessories
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Shoes
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Jewellery and Watches
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Handbag and Accessories
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#electronics-collapse"
+                  aria-expanded="false"
                 >
-                  Updates
-                </Link>
+                  Electronics
+                </button>
+                <div className="collapse " id="electronics-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Mobile phones and communication
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Computing, Tablets and Networking
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Cameras and photography
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Home appliances
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Sound and Vision
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Video games and consoles{" "}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Reports
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
 
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#jewelry-and-watches-collapse"
-            aria-expanded="false"
-          >
-            Jewelry and Watches
-          </button>
-          <div className="collapse " id="jewelry-and-watches-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#home-and-garden-collapse"
+                  aria-expanded="false"
                 >
-                  Overview
-                </Link>
+                  Home and Garden
+                </button>
+                <div className="collapse " id="home-and-garden-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Furniture
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Home Decor and Rugs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Garden and Patio
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        DIY Tools
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Home Decorating
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Personalised Gifts
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Bath
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Home Offers
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Updates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Reports
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#sports-and-outdoors-collapse"
-            aria-expanded="false"
-          >
-            Sports and Outdoors
-          </button>
-          <div className="collapse" id="sports-and-outdoors-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  New
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Processed
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Shipped
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Returned
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#book-music-movie-game-collapse"
-            aria-expanded="false"
-          >
-            Book, Music, Movie, Game
-          </button>
-          <div className="collapse " id="book-music-movie-game-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Overview
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Updates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Reports
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#automotive-collapse"
-            aria-expanded="false"
-          >
-            Automotive and Motorcycle
-          </button>
-          <div className="collapse " id="automotive-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Overview
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Updates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
-                >
-                  Reports
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
 
-        <li className="border-top my-3"></li>
-        <li className="mb-1">
-          <button
-            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#account-collapse"
-            aria-expanded="false"
-          >
-            Account
-          </button>
-          <div className="collapse" id="account-collapse">
-            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#health-and-beauty-collapse"
+                  aria-expanded="false"
                 >
-                  New...
-                </Link>
+                  Health and Beauty
+                </button>
+                <div className="collapse " id="health-and-beauty-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Health Care
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Vitamins and Dietary Supplements
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Independent Living
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Oral Care
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Natural and Alternative Remedies
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Vision Care
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Other Health and Beauty
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Sports Supplements
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
+
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#toys-collapse"
+                  aria-expanded="false"
                 >
-                  Profile
-                </Link>
+                  Toys
+                </button>
+                <div className="collapse " id="toys-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        LEGO
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Remote-Controlled Toys
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Games
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        TV and Film Character Toys
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#sports-and-leisure-collapse"
+                  aria-expanded="false"
                 >
-                  Settings
-                </Link>
+                  Sports and Leisure
+                </button>
+                <div className="collapse" id="sports-and-leisure-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Sporting Goods
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Fitness, Running and Yoga
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Cycling
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Fishing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Golf
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Camping and Hiking
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Equestrian
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Musical Instruments
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className=" d-inline-flex text-decoration-none rounded"
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#home-entertainment-collapse"
+                  aria-expanded="false"
                 >
-                  Sign out
-                </Link>
+                  Home Entertainment
+                </button>
+                <div className="collapse " id="home-entertainment-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Books and Comics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Music
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        DVD and Blu Ray
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Video Games
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#motors-collapse"
+                  aria-expanded="false"
+                >
+                  Motors
+                </button>
+                <div className="collapse " id="motors-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        My Garage
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Vehicle Parts and Accessories
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Cars, Motorcycles and Vehicles
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Motoring Deals and Offers
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collectables-collapse"
+                  aria-expanded="false"
+                >
+                  Collectables
+                </button>
+                <div className="collapse " id="collectables-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Antiques
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Collectables
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        Pottery Ceramics Glass
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="border-top my-3"></li>
+              <li className="mb-1">
+                <button
+                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#local-collapse"
+                  aria-expanded="false"
+                >
+                  Local
+                </button>
+                <div className="collapse" id="local-collapse">
+                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <Link
+                        to="#"
+                        className=" d-inline-flex text-decoration-none rounded"
+                      >
+                        New...
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
-        </li>
-      </ul>
+        </div>
+        <button
+          type="button"
+          className="img-container"
+          id="img-container"
+          data-bs-toggle="collapse"
+          data-bs-target="#categories-collapse"
+          aria-expanded="true"
+          aria-controls="categories-collapse"
+        >
+          <MenuLogo id="menu-icon" />
+          <img
+            className=""
+            height="80px"
+            src="./Image/blackhole.svg"
+          ></img>
+        </button>
       </div>
-    </div>
-    <button type="button" className="img-container" id="img-container"
-    data-bs-toggle="collapse" 
-    data-bs-target="#categories-collapse"
-    aria-expanded="true"
-    aria-controls="categories-collapse"
-    
-    >
-<MenuLogo id="menu-icon"/>
-    <img 
-       className="" height="80px"src="./imagesForTest/blackhole.svg"></img>
-       </button>
-    </div>
     </div>
   );
 };

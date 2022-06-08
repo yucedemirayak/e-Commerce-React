@@ -33,7 +33,7 @@ const Header = () => {
               <img
                 className="blackhole rotatex"
                 height="180px"
-                src="./imagesForTest/blackhole.svg"
+                src="./image/blackhole.svg"
               ></img>
               <CompanyLogo className="" />
             </div>
@@ -43,7 +43,7 @@ const Header = () => {
               id="blackhole-big"
               className="blackhole-big "
               height="1800px"
-              src="./imagesForTest/blackhole.svg"
+              src="./image/blackhole.svg"
             ></img>
           </div>
           <form
