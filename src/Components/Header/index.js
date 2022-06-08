@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../Header/header.scss";
+import "../Header/Header.scss";
 import { FaOpencart } from "react-icons/fa";
 import {
   RiSearchLine,

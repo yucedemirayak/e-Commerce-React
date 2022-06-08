@@ -10,7 +10,7 @@ import {
   import { IconContext } from "react-icons";
   import { FaOpencart } from "react-icons/fa";
   
-  import "../Footer/footer.scss"
+  import "../Footer/Footer.scss"
 
 const CompanyLogo = () => {
   return (

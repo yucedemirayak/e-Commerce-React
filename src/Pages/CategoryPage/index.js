@@ -1,5 +1,5 @@
 import React from 'react'
-import "../CategoryPage/categoryPage.scss"
+import "../CategoryPage/CategoryPage.scss"
 
 const CategoryPage = () => {
   return (

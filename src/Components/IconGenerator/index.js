@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.scss'
+
 
 const IconGenerator = ({ _iconName }) => {
     

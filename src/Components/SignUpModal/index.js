@@ -5,7 +5,7 @@ import { Genders } from "../../Services/Utils/Enums/Gender/genders";
 import { SingUpUserModel } from "../../Services/Utils/Forms/Sign-Up/User/initialModel";
 import { SignUpUserValidationScheme } from "../../Services/Utils/Forms/Sign-Up/User/validationScheme";
 
-import "../SignUpModal/signUpModal.scss";
+import "../SignUpModal/SignUpModal.scss";
 
 const SignUpModal = () => {
   // const dispatch = useDispatch();

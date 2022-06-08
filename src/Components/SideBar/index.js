@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
-import "../SideBar/sideBar.scss";
+import "../SideBar/SideBar.scss";
 import {
   RiMenuFoldLine
 } from "react-icons/ri";
@@ -48,7 +48,7 @@ const SideBar = () => {
                   to="#"
                   className=" d-inline-flex text-decoration-none rounded"
                 >
-                  Overview
+                  Men
                 </Link>
               </li>
               <li>
@@ -56,7 +56,7 @@ const SideBar = () => {
                   to="#"
                   className=" d-inline-flex text-decoration-none rounded"
                 >
-                  Weekly
+                  Women
                 </Link>
               </li>
               <li>
@@ -64,7 +64,7 @@ const SideBar = () => {
                   to="#"
                   className=" d-inline-flex text-decoration-none rounded"
                 >
-                  Monthly
+                  Kids
                 </Link>
               </li>
               <li>
@@ -72,7 +72,13 @@ const SideBar = () => {
                   to="#"
                   className=" d-inline-flex text-decoration-none rounded"
                 >
-                  Annually
+                   Watches and Jewellery
+                </Link>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                 Luggages
                 </Link>
               </li>
             </ul>
@@ -94,7 +100,7 @@ const SideBar = () => {
                   to="#"
                   className=" d-inline-flex text-decoration-none rounded"
                 >
-                  Overview
+                  SmartPhones and Accessories
                 </Link>
               </li>
               <li>
@@ -102,7 +108,7 @@ const SideBar = () => {
                   to="#"
                   className=" d-inline-flex text-decoration-none rounded"
                 >
-                  Updates
+                  Computers and Tablets
                 </Link>
               </li>
               <li>
@@ -110,7 +116,13 @@ const SideBar = () => {
                   to="#"
                   className=" d-inline-flex text-decoration-none rounded"
                 >
-                  Reports
+                  TVs, Sound and Visual Systems
+                </Link>
+                <Link
+                  to="#"
+                  className=" d-inline-flex text-decoration-none rounded"
+                >
+                  TVs, Sound and Visual Systems
                 </Link>
               </li>
             </ul>
