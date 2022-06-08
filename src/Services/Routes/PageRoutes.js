@@ -9,6 +9,7 @@ import Cart from "../../Pages/Cart";
 import PageNotFound from "../../Pages/PageNotFound";
 import SignUp from "../../Pages/SignUp";
 import Team from "../../Pages/Team";
+import CategoryPage from "../../Pages/CategoryPage";
 // import RequireAuth from "./requireAuth";
 const PageRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const PageRoutes = () => {
           <Route exact path="/Cart" element={<Cart />} />
           <Route exact path="/SignUp" element={<SignUp/>} />
           <Route exact path="/Team" element={<Team/>} />
+          <Route exact path="/Categories" element={<CategoryPage/>} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
        

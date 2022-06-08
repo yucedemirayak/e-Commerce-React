@@ -71,7 +71,12 @@ const Header = () => {
                 Login
               </Link>
             </li>
-
+            <li>
+              <Link to={"./Categories"} className="nav-link">
+                <RiUserLine className="mx-1 mb-1" />
+                Categories
+              </Link>
+            </li>
             <li>
               <Link to={"./Favorites"} className="nav-link">
                 <RiHeartLine className="mx-1 mb-1" />
