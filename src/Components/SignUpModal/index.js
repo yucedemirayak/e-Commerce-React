@@ -1,5 +1,6 @@
 import { Form, Formik } from "formik";
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Genders } from "../../Services/Utils/Enums/Gender/genders";
 // import { useDispatch } from "react-redux";
 import { SingUpUserModel } from "../../Services/Utils/Forms/Sign-Up/User/initialModel";
@@ -8,14 +9,10 @@ import { SignUpUserValidationScheme } from "../../Services/Utils/Forms/Sign-Up/U
 import "../SignUpModal/SignUpModal.scss";
 
 const SignUpModal = () => {
-  // const dispatch = useDispatch();
-  // const login = (loginModel) => {
-  //   ///dispatch(authCreateToken(loginModel));
-  // };
+  const dispatch = useDispatch();
 
-  const signUpUser = (values) => {
-    //axios post
-    console.log(values);
+  const signUpUser = (SignUpModel) => {
+  //  dispatch(authCreateToken(SignUpModel));
   }
 
   return (
@@ -39,7 +36,6 @@ const SignUpModal = () => {
             <div className="col-lg-6 mb-5 mb-lg-0">
               <div className="card">
                 <div className="card-body py-5 px-md-5">
-                  {/* FIXME: Formik çalışmıyor */}
                   <Formik
                     id="sign-up-container-user"
                     initialValues={SingUpUserModel}
@@ -50,24 +46,25 @@ const SignUpModal = () => {
                   >{({ errors, touched, handleChange}) => (
                     <Form>
                     <div className="row">
-                      <div className="col-md-6 mb-4">
-                        <div className="form-outline">
+                    <label className="form-label">
+                            * First Name
+                          </label>
+                        <div className="form-outline mb-4">
                           {errors.firstName && touched.firstName ? (
                             <small>{errors.firstName}</small>
                           ) : null}
                           <input
                             type="text"
-                            name="firstname"
+                            name="firstName"
                             onChange={handleChange}
                             className="form-control"
                           />
-                          <label className="form-label">
-                            First name
-                          </label>
                         </div>
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <div className="form-outline">
+
+                        <label className="form-label">
+                           * Last Name
+                          </label>
+                        <div className="form-outline mb-4">
                           {errors.lastName && touched.lastName ? (
                             <small>{errors.lastName}</small>
                           ) : null}
@@ -77,13 +74,13 @@ const SignUpModal = () => {
                             onChange={handleChange}
                             className="form-control"
                           />
-                          <label className="form-label">
-                            Last name
-                          </label>
+
                         </div>
                       </div>
-                    </div>
 
+                      <label className="form-label">
+                       * E-mail Address
+                      </label>
                     <div className="form-outline mb-4">
                       {errors.email && touched.email ? (
                         <small>{errors.email}</small>
@@ -94,11 +91,11 @@ const SignUpModal = () => {
                         onChange={handleChange}
                         className="form-control"
                       />
-                      <label className="form-label">
-                        Email address
-                      </label>
-                    </div>
 
+                    </div>
+                    <label className="form-label">
+                       * Password
+                      </label>
                     <div className="form-outline mb-4">
                       {errors.password && touched.password ? (
                         <small>{errors.password}</small>
@@ -109,11 +106,11 @@ const SignUpModal = () => {
                         onChange={handleChange}
                         className="form-control"
                       />
-                      <label className="form-label">
-                        Password
-                      </label>
-                    </div>
 
+                    </div>
+                    <label className="form-label">
+                       * Re-Password
+                      </label>
                     <div className="form-outline mb-4">
                       {errors.rePassword && touched.rePassword ? (
                         <small>{errors.rePassword}</small>
@@ -124,11 +121,11 @@ const SignUpModal = () => {
                         onChange={handleChange}
                         className="form-control"
                       />
-                      <label className="form-label">
-                        re-Password
-                      </label>
-                    </div>
 
+                    </div>
+                    <label className="form-label">
+                       * Phone Number 
+                      </label>
                     <div className="form-outline mb-4">
                       {errors.phoneNumber && touched.phoneNumber ? (
                         <small>{errors.phoneNumber}</small>
@@ -139,19 +136,19 @@ const SignUpModal = () => {
                         onChange={handleChange}
                         className="form-control"
                       />
-                      <label className="form-label">
-                        Phone Number
-                      </label>
-                    </div>
 
+                    </div>
+                    <label className="form-label">
+                        Gender (optional)
+                      </label>
                     <div className="form-outline mb-4 border border-2">
                       {errors.gender && touched.gender ? (
                         <small>{errors.gender}</small>
                       ) : null}
-                      <select name="gender">
-                        <option
+                      <select name="gender" className="w-100">
+                      <option
                           value={""}
-                          label="Select your gender"
+                          label={"Please select"}
                         ></option>
                         <option
                           value={Genders.MALE}
@@ -168,19 +165,20 @@ const SignUpModal = () => {
                       </select>
                     </div>
 
+                    <label className="form-label">
+                        Birth Date (optional)
+                      </label>
                     <div className="form-outline mb-4">
                       {errors.birthDate && touched.birthDate ? (
                         <small>{errors.birthDate}</small>
                       ) : null}
                       <input
                         type="date"
+                        
                         name="birthDate"
                         onChange={handleChange}
-                        className="form-control"
+                        className="form-control w-100 datepicker"
                       />
-                      <label className="form-label">
-                        Birth Date
-                      </label>
                     </div>
 
                     <button
@@ -191,7 +189,7 @@ const SignUpModal = () => {
                     </button>
                     <button
                       type="button"
-                      className="btn btn-primary btn-block mb-4 ms-4"
+                      className="btn btn-primary btn-block mb-4 ms-5"
                     >
                       Back to Login Page
                     </button>

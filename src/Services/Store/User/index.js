@@ -14,9 +14,9 @@ export const userStore = createSlice({
         setUserEmail: _setEmail,
         setUserPassword: _setPassword,
     },
-    // extraReducers: {
-
-    // },
+     extraReducers: {
+        
+    },
 });
 
 export const { setUserEmail , setUserPassword} = userStore.actions;
