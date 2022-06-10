@@ -3,15 +3,7 @@ Cagdas:
     ✔  Favicon iconunu değiştir @done(22-06-01 19:24)
     ☐  Favicon iconunu değiştir
     ☐ Forgot password Modal
-<<<<<<< HEAD
-    ✔ Categori okları > ∨ @done(22-06-03 17:38)
-=======
-<<<<<<< HEAD
-    ☐ Categori okları > ∨
->>>>>>> 6b34d64908050a045fb99ffe4ed532dcb00ca5bd
-
-=======
->>>>>>> feature/yuce
+    ✔ Categori oklari >  @done(22-06-03 17:38)
     Pages:
       ☐ login
       ☐ signup standart
@@ -23,7 +15,6 @@ Cagdas:
       ☐ dashboard
       ☐ 
       
-
 Yuce:
   Todo:
     ☐ Axios service yaz

@@ -18,6 +18,6 @@ export const SignUpUserValidationScheme = yup.object().shape({
   phoneNumber: yup.string().required(ValidationMessages.REQUIRED),
 
   //FIXME: Genders enum yup kullanımına bak
-  gender: yup.mixed().oneOf([Genders.MALE]),
+  gender: yup.mixed().oneOf([Genders]),
   birthDate: yup.string(),
 });
