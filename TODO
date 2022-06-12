@@ -4,6 +4,10 @@ Cagdas:
     ☐  Favicon iconunu değiştir
     ☐ Forgot password Modal
     ✔ Categori oklari >  @done(22-06-03 17:38)
+
+
+    ☐ Category card'larını komponent hale getir.
+
     Pages:
       ☐ login
       ☐ signup standart
@@ -18,6 +22,16 @@ Cagdas:
 Yuce:
   Todo:
     ☐ Axios service yaz
+
+  Axios:
+      ☐ Sign Up User
+      ☐ Login In User
+      ☐ Get All Products
+      ☐ Get All Categories
+      ☐ Get All Sub Categories
+      ☐ Sign Up Shop Owner
+      ☐ Login Shop Owner
+      ☐ Admin Login In
     
 
 ChangeLog:

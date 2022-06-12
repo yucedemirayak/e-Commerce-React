@@ -1,5 +1,5 @@
 export const Genders = {
-    MALE: "Male",
-    FEMALE: "Female",
-    NOTDEFINED: "Not Defined"
+    FEMALE: 0,
+    MALE: 1,
+    NOTDEFINED: 2
 };
