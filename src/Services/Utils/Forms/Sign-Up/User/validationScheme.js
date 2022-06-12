@@ -1,5 +1,4 @@
 import * as yup from "yup";
-import { Genders } from "../../../Enums/Gender/genders";
 import { ValidationMessages } from "../../../Enums/Validation/validationMessages";
 
 
@@ -16,8 +15,6 @@ export const SignUpUserValidationScheme = yup.object().shape({
     .required(ValidationMessages.REQUIRED)
     .oneOf([yup.ref("password"), null], ValidationMessages.PASSWORDNOTMATCH),
   phoneNumber: yup.string().required(ValidationMessages.REQUIRED),
-
-  //FIXME: Genders enum yup kullanımına bak
-  gender: yup.mixed().oneOf(Object.values(Genders)),
   birthDate: yup.string(),
+  gender: yup.number(),
 });

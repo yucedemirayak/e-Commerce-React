@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { authLogout } from "../../Store/Auth";
 import { errorToast } from "../Helpers/toastHelper";
 
 export const setupAxios = (store) => {
@@ -31,7 +31,7 @@ export const setupAxios = (store) => {
       }
 
       if (error.response.status === 403) {
-        errorToast("Malesef bu sayfayı görüntüleme yetkiniz, yoktur.");
+        errorToast("Unfortunately, you are not authorized to view this page.");
         window.history.back();
         return;
       }

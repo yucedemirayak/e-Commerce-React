@@ -1,8 +1,10 @@
 import { Form, Formik } from "formik";
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { createToken } from "../../Services/Store/Auth/createToken";
+import { createUser } from "../../Services/Store/User/createNewUser";
 import { Genders } from "../../Services/Utils/Enums/Gender/genders";
-// import { useDispatch } from "react-redux";
 import { SingUpUserModel } from "../../Services/Utils/Forms/Sign-Up/User/initialModel";
 import { SignUpUserValidationScheme } from "../../Services/Utils/Forms/Sign-Up/User/validationScheme";
 
@@ -10,9 +12,23 @@ import "../SignUpModal/SignUpModal.scss";
 
 const SignUpModal = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const signUpUser = (SignUpModel) => {
-  //  dispatch(authCreateToken(SignUpModel));
+    console.log(SignUpModel)
+    dispatch(createUser(SignUpModel));
+    
+    if (createUser.fulfilled) {
+      var loginModel = {
+        email: SignUpModel.email,
+        password: SignUpModel.password
+      }
+      console.log(loginModel);
+      dispatch(createToken(loginModel));
+    }
+    if (createToken.fulfilled) {
+      navigate("/Categories")
+    }
   }
 
   return (
@@ -40,10 +56,12 @@ const SignUpModal = () => {
                     id="sign-up-container-user"
                     initialValues={SingUpUserModel}
                     validationSchema={SignUpUserValidationScheme}
-                    onSubmit={(values) => {
-                      signUpUser(values);
+                    onSubmit={(_values) => {
+                      delete _values['rePassword'];
+                      _values.gender = parseInt(_values.gender);
+                      signUpUser(_values);
                     }}
-                  >{({ errors, touched, handleChange}) => (
+                  >{({ errors, touched, handleChange, handleBlur}) => (
                     <Form>
                     <div className="row">
                     <label className="form-label">
@@ -119,6 +137,7 @@ const SignUpModal = () => {
                         type="password"
                         name="rePassword"
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         className="form-control"
                       />
 
@@ -142,27 +161,22 @@ const SignUpModal = () => {
                         Gender (optional)
                       </label>
                     <div className="form-outline mb-4 border border-2">
-                      {errors.gender && touched.gender ? (
-                        <small>{errors.gender}</small>
-                      ) : null}
-                      <select name="gender" className="w-100">
+                      <select name="gender" type="number" className="w-100" onChange={handleChange} defaultValue={Genders.NOTDEFINED}>
                       <option
-                          value={""}
-                          label={"Please select"}
+                          value={Genders.NOTDEFINED}
                         ></option>
                         <option
                           value={Genders.MALE}
-                          label={Genders.MALE}
+                          label={"Male"}
                         ></option>
                         <option
                           value={Genders.FEMALE}
-                          label={Genders.FEMALE}
-                        ></option>
-                        <option
-                          value={Genders.NOTDEFINED}
-                          label={Genders.NOTDEFINED}
+                          label={"Female"}
                         ></option>
                       </select>
+                      {errors.gender && touched.gender ? (
+                        <small>{errors.gender}</small>
+                      ) : null}
                     </div>
 
                     <label className="form-label">
@@ -174,7 +188,6 @@ const SignUpModal = () => {
                       ) : null}
                       <input
                         type="date"
-                        
                         name="birthDate"
                         onChange={handleChange}
                         className="form-control w-100 datepicker"

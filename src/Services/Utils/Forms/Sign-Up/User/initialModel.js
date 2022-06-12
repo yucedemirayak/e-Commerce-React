@@ -5,6 +5,6 @@ export const SingUpUserModel = {
     password: "",
     rePassword: "",
     phoneNumber: "",
-    gender: "",
+    gender: 2,
     birthDate: "",
 }
