@@ -19,6 +19,48 @@ Cagdas:
       ☐ dashboard
       ☐ 
       
+
+DashBoard:
+  Admin: 
+    Admin:
+      ☐ Create Admin => Create Admin Modal
+      ☐ List Admins / Get Details:
+        ☐ Admin Info Show / Edit / Delete 
+    ShopOwner: 
+      ☐ List All ShopOwners / Get Details
+      ☐ Show ShopOwner Info: Edit / Delete
+        ☐ Validate ShopOwner
+        ☐ ShopOwner Adresses List:
+          ☐ ShopOwner Adresses Add / Edit / Delete
+        ☐ ShopOwner Products List:
+          ☐ Products With Product Images Add / Edit / Delete
+        ☐ ShopOwner Orders List: 
+          ☐ Order Detail Add / Edit / Delete
+    User: 
+      ☐ List All Users / Get Details
+      ☐ User Info Edit / Delete:
+         ☐ User's Adresses Add / Edit / Delete
+         ☐ User's Favourite List Add Product / Edit / Delete
+         ☐ User's Cart Add Product / Edit / Delete
+    Category:
+      ☐ List Categories / Get Details
+      ☐ Category Info With Picture Add / Edit / Delete:
+        ☐ SubCategory With Picture Add / Edit / Delete
+     
+  ShopOwner:
+    ☐ Show Details
+    ☐ Edit Info
+    ☐ Show Adresses / Edit
+    ☐ Show Products / Edit / Delete
+    ☐ Show Orders
+  
+  User:
+    ☐ Show Info
+    ☐ Favourite List Add / Delete
+    ☐ Cart Product List Add / Delete
+    ☐ Edit Adresses 
+    ☐ Show Active & Previous Orders With Product Details
+
 Yuce:
   Todo:
     ☐ Axios service yaz
