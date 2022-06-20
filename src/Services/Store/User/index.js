@@ -3,13 +3,13 @@ import { createUser } from "./createNewUser.js";
 import { _setEmail, _setPassword } from "./userActions.js";
 
 
+
 export const userStore = createSlice({
     name: "user",
     initialState: {
         name: "",
         email: "",
         password: "",
-        authToken: "",
     },
     reducers: {
         setUserEmail: _setEmail,

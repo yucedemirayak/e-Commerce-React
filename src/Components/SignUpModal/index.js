@@ -1,8 +1,6 @@
 import { Form, Formik } from "formik";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router";
-import { createToken } from "../../Services/Store/Auth/createToken";
 import { createUser } from "../../Services/Store/User/createNewUser";
 import { Genders } from "../../Services/Utils/Enums/Gender/genders";
 import { SingUpUserModel } from "../../Services/Utils/Forms/Sign-Up/User/initialModel";
@@ -12,23 +10,11 @@ import "../SignUpModal/SignUpModal.scss";
 
 const SignUpModal = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
-  const signUpUser = (SignUpModel) => {
-    console.log(SignUpModel)
-    dispatch(createUser(SignUpModel));
-    
-    if (createUser.fulfilled) {
-      var loginModel = {
-        email: SignUpModel.email,
-        password: SignUpModel.password
-      }
-      console.log(loginModel);
-      dispatch(createToken(loginModel));
-    }
-    if (createToken.fulfilled) {
-      navigate("/Categories")
-    }
+  const signUpUser = async (SignUpModel) => {
+
+   await dispatch(createUser(SignUpModel));
+
   }
 
   return (

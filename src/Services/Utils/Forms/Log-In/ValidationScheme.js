@@ -1,7 +1,7 @@
 import * as yup from "yup";
 import { ValidationMessages } from "../../Enums/Validation/validationMessages";
 
-export const LogInValidationSceheme = yup.object().shape({
+export const LogInValidationScheme = yup.object().shape({
   email: yup
     .string()
     .email(ValidationMessages.EMAIL)

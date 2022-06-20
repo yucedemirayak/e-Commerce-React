@@ -1,5 +1,5 @@
 import axios from "axios";
-import { authLogout } from "../../Store/Auth";
+import { authLogOut } from "../../Store/Auth";
 import { errorToast } from "../Helpers/toastHelper";
 
 export const setupAxios = (store) => {
@@ -26,7 +26,7 @@ export const setupAxios = (store) => {
     (error) => {
       if (error.response.status === 401) {
         errorToast(error.response.data.message);
-        store.dispatch(authLogout());
+        store.dispatch(authLogOut());
         return;
       }
 

@@ -9,7 +9,7 @@ export const authStore = createSlice({
         role: undefined,
     },
     reducers: {
-        logOut: _logout
+        authLogOut: _logout
     },
     extraReducers: {
         [createToken.fulfilled]: (state, action) => {
@@ -23,6 +23,6 @@ export const authStore = createSlice({
     },
 })
 
-export const { authLogout } = authStore.actions;
+export const { authLogOut } = authStore.actions;
 
 export default authStore.reducer;

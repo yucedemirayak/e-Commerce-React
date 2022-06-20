@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import "../Header/Header.scss";
 import { FaOpencart } from "react-icons/fa";
 import {
@@ -7,8 +8,11 @@ import {
   RiUserLine,
   RiHeartLine,
   RiShoppingCartLine,
+  RiLogoutBoxRLine,
 } from "react-icons/ri";
 import { IconContext } from "react-icons";
+import { useDispatch } from "react-redux";
+import { authLogOut } from "../../Services/Store/Auth";
 
 const CompanyLogo = () => {
   return (
@@ -21,6 +25,14 @@ const CompanyLogo = () => {
 };
 
 const Header = () => {
+  const { token } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const _signOut = async () => {
+   await dispatch(authLogOut());
+   await navigate("./");
+  };
+
   return (
     <header className="p-3 ">
       <div className="container ">
@@ -34,6 +46,7 @@ const Header = () => {
                 className="blackhole rotatex"
                 height="180px"
                 src="./image/blackhole.svg"
+                alt="blockhole"
               ></img>
               <CompanyLogo className="" />
             </div>
@@ -44,6 +57,7 @@ const Header = () => {
               className="blackhole-big "
               height="1800px"
               src="./image/blackhole.svg"
+              alt="blackhole"
             ></img>
           </div>
           <form
@@ -66,10 +80,14 @@ const Header = () => {
 
           <ul className="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
-              <Link to={"./Login"} className="nav-link">
+              {!token? <Link to={"./Login"} className="nav-link">
                 <RiUserLine className="mx-1 mb-1" />
                 Login
-              </Link>
+              </Link> : <Link to={"./Dashboard"} className="nav-link">
+                <RiUserLine className="mx-1 mb-1" />
+                My Account
+              </Link>}
+
             </li>
             <li>
               <Link to={"./Categories"} className="nav-link">
@@ -89,6 +107,16 @@ const Header = () => {
                 Cart
               </Link>
             </li>
+            {token? 
+            <li>
+              <button className="nav-link logout" onClick={() => {
+                _signOut();
+              }}>
+              <RiLogoutBoxRLine className="mx-1 mb-1" />
+              LogOut
+              </button>
+            </li> : null 
+          }
           </ul>
 
           {/* <SearchAnimation className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"/> */}

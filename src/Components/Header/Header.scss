@@ -38,8 +38,8 @@
   transform: rotate(360deg);
 }
 
-#search-btn:hover {
-}
+// #search-btn:hover {
+// }
 
 .rotatex {
   animation: rotation 8s infinite linear;
@@ -52,4 +52,8 @@
   to {
     transform: rotate(359deg);
   }
+}
+
+.logout {
+  background-color: transparent;
 }
