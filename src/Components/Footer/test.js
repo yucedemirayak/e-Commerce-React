@@ -95,6 +95,7 @@ const test = () => {
                 className="blackhole-footer rotatex"
                 height="180px"
                 src="./image/blackhole.svg"
+                alt=''
               ></img>
               <CompanyLogo className="" />
             </div> 
@@ -150,7 +151,7 @@ const test = () => {
         </div> 
         <nav className="dropup"> 
         <button className="dropdown-toggle btn text-white d-flex align-items-center py-0" type="button" data-bs-toggle="dropdown"> 
-        <img src="bootstrap5-ecommerce/images/flags/flag-usa.png" className="me-2" height="20"/> 
+        <img alt='' src="bootstrap5-ecommerce/images/flags/flag-usa.png" className="me-2" height="20"/> 
         <span>English</span> 
         </button> 
         <ul className="dropdown-menu dropdown-menu-end"> 

@@ -11,6 +11,8 @@ import SignUp from "../../Pages/SignUp";
 import Team from "../../Pages/Team";
 import CategoryPage from "../../Pages/CategoryPage";
 import { useSelector } from "react-redux";
+import AdminDashboard from "../../Pages/AdminDashboard";
+import LayoutAdmin from "../../Containers/LayoutAdminDashBoard";
 //import RequireAuth from "./requireAuth";
 
 const PageRoutes = () => {
@@ -28,6 +30,9 @@ const PageRoutes = () => {
           <Route exact path="/Team" element={<Team/>} />
           <Route exact path="/Categories" element={<CategoryPage/>} />
           <Route path="*" element={<PageNotFound />} />
+        </Route>
+        <Route element={<LayoutAdmin/>}>
+          <Route exact path="/Dashboard" element={<AdminDashboard/>} />
         </Route>
       </Routes>
     </Router>

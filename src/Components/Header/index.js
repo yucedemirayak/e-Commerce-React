@@ -29,14 +29,17 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const _signOut = async () => {
-   await dispatch(authLogOut());
-   await navigate("./");
+    await dispatch(authLogOut());
+    await navigate("./");
   };
 
   return (
     <header className="p-3 ">
       <div className="container ">
-        <div id="wrapper" className=" d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <div
+          id="wrapper"
+          className=" d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
           <Link
             to={"./"}
             className="d-flex align-items-center mb-2 mb-lg-0 mx-2  text-decoration-none"
@@ -80,14 +83,17 @@ const Header = () => {
 
           <ul className="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
-              {!token? <Link to={"./Login"} className="nav-link">
-                <RiUserLine className="mx-1 mb-1" />
-                Login
-              </Link> : <Link to={"./Dashboard"} className="nav-link">
-                <RiUserLine className="mx-1 mb-1" />
-                My Account
-              </Link>}
-
+              {!token ? (
+                <Link to={"./Login"} className="nav-link">
+                  <RiUserLine className="mx-1 mb-1" />
+                  Login
+                </Link>
+              ) : (
+                <Link to={"./Dashboard"} className="nav-link">
+                  <RiUserLine className="mx-1 mb-1" />
+                  My Account
+                </Link>
+              )}
             </li>
             <li>
               <Link to={"./Categories"} className="nav-link">
@@ -107,16 +113,19 @@ const Header = () => {
                 Cart
               </Link>
             </li>
-            {token? 
-            <li>
-              <button className="nav-link logout" onClick={() => {
-                _signOut();
-              }}>
-              <RiLogoutBoxRLine className="mx-1 mb-1" />
-              LogOut
-              </button>
-            </li> : null 
-          }
+            {token ? (
+              <li>
+                <button
+                  className="nav-link logout"
+                  onClick={() => {
+                    _signOut();
+                  }}
+                >
+                  <RiLogoutBoxRLine className="mx-1 mb-1" />
+                  LogOut
+                </button>
+              </li>
+            ) : null}
           </ul>
 
           {/* <SearchAnimation className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"/> */}

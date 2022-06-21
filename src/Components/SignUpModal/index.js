@@ -179,19 +179,21 @@ const SignUpModal = () => {
                         className="form-control w-100 datepicker"
                       />
                     </div>
-
-                    <button
-                      type="submit"
-                      className="btn btn-primary btn-block mb-4"
-                    >
-                      Sign up
-                    </button>
-                    <button
+                   <div className="signupbuttons">
+                   <button
                       type="button"
-                      className="btn btn-primary btn-block mb-4 ms-5"
+                      className="btn btn-secondary"
                     >
                       Back to Login Page
                     </button>
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                    >
+                      Sign up
+                    </button>
+                    </div>
+                  
                   </Form>
                   )}
                   </Formik>
