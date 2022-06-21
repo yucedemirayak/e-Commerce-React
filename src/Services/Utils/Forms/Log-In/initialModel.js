@@ -1,1 +1,1 @@
-export const LogInModel = { email: '', password: ''};
+export const LogInModel = { email: "", password: "" };

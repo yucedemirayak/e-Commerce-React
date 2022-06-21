@@ -20,8 +20,8 @@
 // 	height: 100vh;
 // }
 // .search-bar input,
-// .search-btn, 
-// .search-btn:before, 
+// .search-btn,
+// .search-btn:before,
 // .search-btn:after {
 // 	transition: all 0.25s ease-out;
 // }
@@ -78,7 +78,7 @@
 // 	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
 // 	transform-origin: 0 50%;
 // }
-// .search-btn:before, 
+// .search-btn:before,
 // .search-btn:after {
 // 	content: "";
 // 	display: block;
@@ -117,9 +117,9 @@
 // 	border-radius: 0 0.375em 0.375em 0;
 // 	transform: scale(1);
 // }
-// .search-bar input:focus + .search-btn:before, 
+// .search-bar input:focus + .search-btn:before,
 // .search-bar input:focus + .search-btn:after,
-// .search-bar input:valid + .search-btn:before, 
+// .search-bar input:valid + .search-btn:before,
 // .search-bar input:valid + .search-btn:after {
 // 	opacity: 1;
 // }

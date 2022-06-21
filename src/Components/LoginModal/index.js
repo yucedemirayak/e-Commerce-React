@@ -12,7 +12,7 @@ const LoginModal = () => {
 
   const login = async (loginModel) => {
     await dispatch(createToken(loginModel));
-  }
+  };
 
   return (
     <section className="vh-100">
@@ -26,72 +26,82 @@ const LoginModal = () => {
             />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-            <Formik initialValues={LogInModel}
-                                validationSchema={LogInValidationScheme}
-                                onSubmit={(_values) => {
-                                  login(_values);
-                                }}>
-              {({ errors, touched, handleChange, handleBlur}) => 
-              (<Form>
-              <div className="form-outline mb-4">
-                <input
-                  type="email"
-                  id="form3Example3"
-                  name="email"
-                  onChange={handleChange}
-                  className="form-control form-control-lg"
-                  placeholder="Enter a valid email address"
-                />
-                <label className="form-label" htmlFor="form3Example3">
-                  Email address
-                </label>
-                {errors.email && touched.email ? <small>errors.email</small> : null}
-              </div>
+            <Formik
+              initialValues={LogInModel}
+              validationSchema={LogInValidationScheme}
+              onSubmit={(_values) => {
+                login(_values);
+              }}
+            >
+              {({ errors, touched, handleChange, handleBlur }) => (
+                <Form>
+                  <div className="form-outline mb-4">
+                    <input
+                      type="email"
+                      id="form3Example3"
+                      name="email"
+                      onChange={handleChange}
+                      className="form-control form-control-lg"
+                      placeholder="Enter a valid email address"
+                    />
+                    <label className="form-label" htmlFor="form3Example3">
+                      Email address
+                    </label>
+                    {errors.email && touched.email ? (
+                      <small>errors.email</small>
+                    ) : null}
+                  </div>
 
-              <div className="form-outline mb-3">
-                <input
-                  type="password"
-                  name="password"
-                  id="form3Example4"
-                  onChange={handleChange}
-                  className="form-control form-control-lg"
-                  placeholder="Enter password"
-                />
-                <label className="form-label" htmlFor="form3Example4">
-                  Password
-                </label>
-                {errors.password && touched.password ? <small>errors.password</small> : null}
-              </div>
+                  <div className="form-outline mb-3">
+                    <input
+                      type="password"
+                      name="password"
+                      id="form3Example4"
+                      onChange={handleChange}
+                      className="form-control form-control-lg"
+                      placeholder="Enter password"
+                    />
+                    <label className="form-label" htmlFor="form3Example4">
+                      Password
+                    </label>
+                    {errors.password && touched.password ? (
+                      <small>errors.password</small>
+                    ) : null}
+                  </div>
 
-              <div className="d-flex justify-content-between align-items-center">
-                <div className="form-check mb-0">
-                  <input
-                    className="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3"
-                  />
-                  <label className="form-check-label" htmlFor="form2Example3">
-                    Remember me
-                  </label>
-                </div>
-                <a href="#!" className="text-body">
-                  Forgot password?
-                </a>
-              </div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <div className="form-check mb-0">
+                      <input
+                        className="form-check-input me-2"
+                        type="checkbox"
+                        value=""
+                        id="form2Example3"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="form2Example3"
+                      >
+                        Remember me
+                      </label>
+                    </div>
+                    <a href="#!" className="text-body">
+                      Forgot password?
+                    </a>
+                  </div>
 
-              <div className="text-center text-lg-start mt-4 pt-2">
-                <button type="submit" className="btn btn-primary btn-lg">
-                  Login
-                </button>
-                <p className="small fw-bold mt-2 pt-1 mb-0">
-                  Don't have an account?{" "}
-                  <Link to={"/SignUp"} className="link-danger">
-                    Register
-                  </Link>
-                </p>
-              </div>
-            </Form>)}
+                  <div className="text-center text-lg-start mt-4 pt-2">
+                    <button type="submit" className="btn btn-primary btn-lg">
+                      Login
+                    </button>
+                    <p className="small fw-bold mt-2 pt-1 mb-0">
+                      Don't have an account?{" "}
+                      <Link to={"/SignUp"} className="link-danger">
+                        Register
+                      </Link>
+                    </p>
+                  </div>
+                </Form>
+              )}
             </Formik>
           </div>
         </div>

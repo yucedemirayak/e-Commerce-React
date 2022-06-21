@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../SideBar/SideBar.scss";
 import { RiMenuFoldLine } from "react-icons/ri";
@@ -608,6 +608,7 @@ const SideBar = () => {
         >
           <MenuLogo id="menu-icon" />
           <img
+            alt=""
             className=""
             height="80px"
             src="./Image/blackhole.svg"

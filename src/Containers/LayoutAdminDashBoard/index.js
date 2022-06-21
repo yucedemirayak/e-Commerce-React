@@ -1,11 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router";
-import DHeader from "../../Components/DHeader/"
+import DHeader from "../../Components/DHeader/";
 
 const LayoutAdmin = () => {
   return (
     <>
-      <DHeader/>
+      <DHeader />
       <Outlet />
     </>
   );

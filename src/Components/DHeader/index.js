@@ -12,9 +12,7 @@ const DHeader = () => {
         <a className="navbar-brand me-auto" href="./Dashboard">
           <span className="text-uppercase font-monospace">admin dashboard</span>
         </a>
-        <button className="btn">
-          LogOut
-        </button>
+        <button className="btn">LogOut</button>
       </div>
     </nav>
   );

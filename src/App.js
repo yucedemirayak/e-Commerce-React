@@ -1,11 +1,8 @@
 // import './App.scss';
-import PageRoutes from './Services/Routes/PageRoutes';
-
+import PageRoutes from "./Services/Routes/PageRoutes";
 
 function App() {
-  return (
-    <PageRoutes/>
-  );
+  return <PageRoutes />;
 }
 
 export default App;

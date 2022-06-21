@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import SignUpModal from '../../Components/SignUpModal';
-
+import SignUpModal from "../../Components/SignUpModal";
 
 const SignUp = () => {
   return (
     <>
-    <SignUpModal/>
+      <SignUpModal />
     </>
   );
 };
 
-export default SignUp
+export default SignUp;

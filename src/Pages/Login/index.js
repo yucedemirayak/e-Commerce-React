@@ -1,15 +1,12 @@
-import React from 'react';
+import React from "react";
 import LoginModal from "../../Components/LoginModal";
-
-
 
 const Login = () => {
   return (
     <>
-    <LoginModal/>
-  
+      <LoginModal />
     </>
   );
 };
 
-export default Login
+export default Login;

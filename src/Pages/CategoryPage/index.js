@@ -3,7 +3,6 @@ import "../CategoryPage/CategoryPage.scss";
 import { Link } from "react-router-dom";
 
 const CategoryPage = () => {
-  
   return (
     <section className="min-vh-100 bg-white p-5">
       <div className="row gy-3  justify-content-center">
