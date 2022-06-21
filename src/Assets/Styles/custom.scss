@@ -1,13 +1,11 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  body{
+  body {
     max-width: 100vw;
     overflow-x: hidden;
-    
   }
-  
 }
 // body {overflow-x: hidden}
 
@@ -22,5 +20,4 @@
 //   "dark": #20374c,
 // );
 
-
-@import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.css";

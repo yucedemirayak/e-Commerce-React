@@ -1,7 +1,6 @@
 import * as yup from "yup";
 import { ValidationMessages } from "../../../Enums/Validation/validationMessages";
 
-
 export const SignUpUserValidationScheme = yup.object().shape({
   firstName: yup.string().required(ValidationMessages.REQUIRED),
   lastName: yup.string().required(ValidationMessages.REQUIRED),

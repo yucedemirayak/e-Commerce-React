@@ -17,27 +17,27 @@ const Footer = () => {
             <h5>Section</h5>
             <ul className="nav flex-column ">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Home
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Features
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Pricing
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   FAQs
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   About
                 </a>
               </li>
@@ -48,27 +48,27 @@ const Footer = () => {
             <h5>Section</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Home
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Features
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Pricing
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   FAQs
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   About
                 </a>
               </li>
@@ -79,27 +79,27 @@ const Footer = () => {
             <h5>Section</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Home
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Features
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   Pricing
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   FAQs
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="." className="nav-link p-0 text-muted">
                   About
                 </a>
               </li>
@@ -131,7 +131,10 @@ const Footer = () => {
           <div className="container">
             <ul className="list-unstyled list-inline text-center">
               <li className="list-inline-item">
-                <a className="btn-floating btn-fb mx-1 waves-effect waves-light">
+                <a
+                  className="btn-floating btn-fb mx-1 waves-effect waves-light"
+                  href="."
+                >
                   <IconContext.Provider className="" value={{ size: "30px" }}>
                     <div className="text-white">
                       <FaFacebookF />
@@ -141,7 +144,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <a className="btn-floating btn-tw mx-1 waves-effect waves-light">
+                <a
+                  className="btn-floating btn-tw mx-1 waves-effect waves-light"
+                  href="."
+                >
                   <IconContext.Provider className="" value={{ size: "30px" }}>
                     <div className="text-white">
                       <FaTwitter />
@@ -150,7 +156,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <a className="btn-floating btn-gplus mx-1 waves-effect waves-light">
+                <a
+                  className="btn-floating btn-gplus mx-1 waves-effect waves-light"
+                  href="."
+                >
                   <IconContext.Provider className="" value={{ size: "30px" }}>
                     <div className="text-white">
                       <FaGooglePlusG />
@@ -159,7 +168,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <a className="btn-floating btn-li mx-1 waves-effect waves-light">
+                <a
+                  className="btn-floating btn-li mx-1 waves-effect waves-light"
+                  href="."
+                >
                   <IconContext.Provider className="" value={{ size: "40px" }}>
                     <div className="text-white">
                       <FaLinkedinIn />
@@ -168,7 +180,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <a className="btn-floating btn-dribbble mx-1 waves-effect waves-light">
+                <a
+                  className="btn-floating btn-dribbble mx-1 waves-effect waves-light"
+                  href="."
+                >
                   <IconContext.Provider className="" value={{ size: "40px" }}>
                     <div className="text-white">
                       <FaDribbble />
@@ -189,23 +204,23 @@ const Footer = () => {
           <p>© 2022 Company, Inc. All rights reserved.</p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3">
-              <a className="link-dark" href="#">
+              <a className="link-dark" href=".">
                 <svg className="bi" width="24" height="24">
-                  <use link="#twitter"></use>
+                  <use link=".twitter"></use>
                 </svg>
               </a>
             </li>
             <li className="ms-3">
-              <a className="link-dark" href="#">
+              <a className="link-dark" href=".">
                 <svg className="bi" width="24" height="24">
-                  <use link="#instagram"></use>
+                  <use link=".instagram"></use>
                 </svg>
               </a>
             </li>
             <li className="ms-3">
-              <a className="link-dark" href="#">
+              <a className="link-dark" href=".">
                 <svg className="bi" width="24" height="24">
-                  <use link="#facebook"></use>
+                  <use link=".facebook"></use>
                 </svg>
               </a>
             </li>
