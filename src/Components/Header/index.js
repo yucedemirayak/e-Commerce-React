@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import "../Header/Header.scss";
+import Styles from "../Header/Header.module.scss";
 import { FaOpencart } from "react-icons/fa";
 import {
   RiSearchLine,
@@ -16,7 +16,7 @@ import { authLogOut } from "../../Services/Store/Auth";
 
 const CompanyLogo = () => {
   return (
-    <IconContext.Provider className="" value={{ size: "40px" }}>
+    <IconContext.Provider value={{ size: "40px" }}>
       <div className="text-white">
         <FaOpencart />
       </div>
@@ -44,17 +44,17 @@ const Header = () => {
             to={"./"}
             className="d-flex align-items-center mb-2 mb-lg-0 mx-2  text-decoration-none"
           >
-            <div className="header-img-container position-relative d-flex align-items-center justify-content-center">
+            <div className={`${Styles.header_img_container} position-relative d-flex align-items-center justify-content-center`}>
               <img
-                className="blackhole rotatex"
+                className={`${Styles.blackhole} ${Styles.rotatex}`}
                 height="180px"
                 src="./image/blackhole.svg"
-                alt="blockhole"
+                alt="blackhole"
               ></img>
               <CompanyLogo className="" />
             </div>
           </Link>
-          <div className="blackhole-big-container">
+          <div className={Styles.blackhole_big_container}>
             <img
               id="blackhole-big"
               className="blackhole-big "
@@ -75,8 +75,8 @@ const Header = () => {
               aria-label="Search"
             />
             <div className="">
-              <Link to={"./Search"} className="nav-link " id="search-btn">
-                <RiSearchLine className="mx-2 mb-1 border" />
+              <Link to={"./Search"} className={Styles.search_icon} id="search-btn">
+                <RiSearchLine className="mx-2 mb-1" />
               </Link>
             </div>
           </form>
@@ -116,7 +116,7 @@ const Header = () => {
             {token ? (
               <li>
                 <button
-                  className="nav-link logout"
+                  className={`${Styles.logout} nav-link`}
                   onClick={() => {
                     _signOut();
                   }}

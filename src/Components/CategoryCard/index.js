@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./CategoryCard.module.scss";
+import Styles from "./CategoryCard.module.scss";
 
-const CategoryCard = (_name, _imgSource) => {
+const CategoryCard = (props) => {
   return (
-    <article className=" col-lg-4 col-md-6 card category-card bg-dark">
+    <article className={`${Styles.category_card} col-lg-4 col-md-6 card bg-dark`}>
       <img
-        src="./Image/Categories/pexels-polina-tankilevitch-3735641.jpg"
-        className="card-img opacity img-category"
+        src={process.env.REACT_APP_FILE_URL + props.imgSource}
+        className={`${Styles.img_category} ${Styles.opacity} card-img`}
         alt=""
       />
       <div className="card-img-overlay">
-        <h5 className="mb-0 text-white">Fashion</h5>
+        <h5 className="mb-0 text-white">{props.name}</h5>
         <p className="card-text text-white"></p>
+        <div className="text-white">{props.details}</div>
         <br />
-        <br />
-        <Link to={"./#"} className="btn btn-light categories">
+        <Link to={"./#"} className={`${Styles.btn_light} btn`}>
           Discover
         </Link>
       </div>

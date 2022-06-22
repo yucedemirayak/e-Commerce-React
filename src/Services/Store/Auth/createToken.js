@@ -5,10 +5,6 @@ export const createToken = createAsyncThunk(
   "auth/loginUser",
   async (loginModel, { dispatch }) => {
     const response = await Post("Auth/loginUser", loginModel);
-    console.log(response);
-    // if (!response.isSuccess) {
-
-    // }
     return response.data;
   }
 );

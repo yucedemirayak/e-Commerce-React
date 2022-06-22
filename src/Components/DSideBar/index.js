@@ -1,23 +1,17 @@
 import React from "react";
+import Styles from "./DSideBar.module.scss";
 import { Link } from "react-router-dom";
-import Styles from "../SideBar/SideBar.module.scss";
 import { RiMenuFoldLine } from "react-icons/ri";
-import { IconContext } from "react-icons";
-const MenuLogo = () => {
+
+
+
+
+const DSideBar = () => {
   return (
-    <IconContext.Provider className="" value={{ size: "20px" }}>
-      <div className="text-white position-absolute d-flex align-items-center justify-content-center">
-        <RiMenuFoldLine />
-      </div>
-    </IconContext.Provider>
-  );
-};
-const SideBar = () => {
-  return (
-    <div className={Styles.side_bar_container}>
-      <div className={`${Styles.side_bar} d-flex p-3`}>
+    <div className="dside-bar-container">
+      <div className="d-flex p-3 side-bar">
         <div className="collapse-horizontal show" id="categories-collapse">
-          <div className={`${Styles.sidebar_card} card card-body card-body-sidebar`}>
+          <div className="card sidebar-card card-body card-body-sidebar">
             <Link
               to=""
               className="d-flex align-items-center justify-content-start  text-decoration-none border-bottom"
@@ -363,6 +357,7 @@ const SideBar = () => {
                   </ul>
                 </div>
               </li>
+
               <li className="mb-1">
                 <button
                   className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
@@ -441,6 +436,7 @@ const SideBar = () => {
                   </ul>
                 </div>
               </li>
+
               <li className="mb-1">
                 <button
                   className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
@@ -487,6 +483,7 @@ const SideBar = () => {
                   </ul>
                 </div>
               </li>
+
               <li className="mb-1">
                 <button
                   className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
@@ -533,6 +530,7 @@ const SideBar = () => {
                   </ul>
                 </div>
               </li>
+              
               <li className="mb-1">
                 <button
                   className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
@@ -571,52 +569,12 @@ const SideBar = () => {
                   </ul>
                 </div>
               </li>
-              <li className="border-top my-3"></li>
-              <li className="mb-1">
-                <button
-                  className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#local-collapse"
-                  aria-expanded="false"
-                >
-                  Local
-                </button>
-                <div className="collapse" id="local-collapse">
-                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li>
-                      <Link
-                        to="#"
-                        className=" d-inline-flex text-decoration-none rounded"
-                      >
-                        New...
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
-        <button
-          type="button"
-          className={Styles.img_container}
-          id="img-container"
-          data-bs-toggle="collapse"
-          data-bs-target="#categories-collapse"
-          aria-expanded="true"
-          aria-controls="categories-collapse"
-        >
-          <MenuLogo id="menu-icon" />
-          <img
-            alt=""
-            className=""
-            height="80px"
-            src="./Image/blackhole.svg"
-          ></img>
-        </button>
       </div>
     </div>
   );
 };
 
-export default SideBar;
+export default DSideBar;

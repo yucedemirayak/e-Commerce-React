@@ -1,0 +1,38 @@
+.blackhole_footer {
+  position: absolute;
+  z-index: -1;
+  // left:-100%;
+}
+.header_img_container:hover {
+  .blackhole {
+    position: absolute;
+
+    // left:-100%;
+
+    transition: transform 1s ease-in-out;
+    transform: rotate(360deg);
+  }
+}
+
+.btn_fb {
+  background-color: #395996;
+}
+.btn_tw {
+  background-color: #4393ce;
+}
+.btn_insta {
+  background-color: #d83377;
+}
+.btn_youtube {
+  background-color: #e52425;
+}
+.btn_li {
+  background-color: #0076b4;
+}
+.social_media_container {
+  a {
+    border-radius: 50%;
+    margin: 10px;
+    padding: 10px;
+  }
+}
