@@ -1,23 +1,22 @@
-.side-bar-container {
+.side_bar_container {
   position: absolute;
   height: 100vh;
 }
+
 span {
   color: black;
 }
-.side-bar {
+.side_bar {
   position: sticky;
   z-index: 10;
   top: 10px;
-  .card,
-  .sidebar-card {
+  .sidebar_card {
     border: 1px solid black;
     border-radius: 10px;
   }
   .card-body-sidebar {
     width: max-content;
   }
-
   ul {
     display: flex;
     flex-direction: column;
@@ -36,7 +35,7 @@ span {
     }
   }
 }
-.img-container {
+.img_container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +49,7 @@ span {
   cursor: pointer;
 }
 
-.img-container:hover {
+.img_container:hover {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   transform: rotate(180deg);

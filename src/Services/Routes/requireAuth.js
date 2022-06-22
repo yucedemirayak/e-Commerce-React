@@ -1,12 +1,12 @@
 import { Navigate, useLocation } from "react-router";
 import store from "../Store";
 
-function RequireAuth({ children }) {
+function RequireAuth({ children , _userRole}) {
   let location = useLocation();
-  const state = store.getState((state) => state.user.authToken);
-  const authToken = state.user.authToken;
-
-  if (!authToken) {
+  const state = store.getState((state) => state);
+  const authToken = state.auth.token;
+  const userRole = state.auth.role;
+  if (!authToken && userRole !== _userRole) {
     return <Navigate to="/Login" state={{ from: location }} replace />;
   }
   return children;

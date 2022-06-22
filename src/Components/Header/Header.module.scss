@@ -1,14 +1,10 @@
-.blackhole-footer {
-  position: absolute;
-  z-index: -1;
-  // left:-100%;
-}
 .blackhole {
   position: absolute;
   z-index: -1;
   // left:-100%;
 }
-.header-img-container:hover {
+
+.header_img_container:hover {
   .blackhole {
     position: absolute;
 
@@ -18,11 +14,8 @@
     transform: rotate(360deg);
   }
 }
-.nav-link {
-  color: white;
-}
 
-.blackhole-big-container {
+.blackhole_big_container {
   position: absolute;
   z-index: -1;
   overflow: hidden;
@@ -38,8 +31,13 @@
   transform: rotate(360deg);
 }
 
-// #search-btn:hover {
-// }
+.search_icon {
+  color: black;
+}
+
+.nav_link {
+  color: white;
+}
 
 .rotatex {
   animation: rotation 8s infinite linear;

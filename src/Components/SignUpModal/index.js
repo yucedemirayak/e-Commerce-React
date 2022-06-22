@@ -6,7 +6,7 @@ import { Genders } from "../../Services/Utils/Enums/Gender/genders";
 import { SingUpUserModel } from "../../Services/Utils/Forms/Sign-Up/User/initialModel";
 import { SignUpUserValidationScheme } from "../../Services/Utils/Forms/Sign-Up/User/validationScheme";
 
-import "../SignUpModal/SignUpModal.scss";
+import Styles from "../SignUpModal/SignUpModal.module.scss";
 
 const SignUpModal = () => {
   const dispatch = useDispatch();
@@ -163,7 +163,7 @@ const SignUpModal = () => {
                             className="form-control w-100 datepicker"
                           />
                         </div>
-                        <div className="signupbuttons">
+                        <div className={Styles.signupbuttons}>
                           <button type="button" className="btn btn-secondary">
                             Back to Login Page
                           </button>

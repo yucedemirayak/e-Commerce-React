@@ -18,6 +18,7 @@ import CategoryPage from "../../Pages/CategoryPage";
 import { useSelector } from "react-redux";
 import AdminDashboard from "../../Pages/AdminDashboard";
 import LayoutAdmin from "../../Containers/LayoutAdminDashBoard";
+import RequireAuth from "./requireAuth";
 //import RequireAuth from "./requireAuth";
 
 const PageRoutes = () => {
@@ -45,6 +46,7 @@ const PageRoutes = () => {
           <Route path="*" element={<PageNotFound />} />
         </Route>
         <Route element={<LayoutAdmin />}>
+       
           <Route exact path="/Dashboard" element={<AdminDashboard />} />
         </Route>
       </Routes>

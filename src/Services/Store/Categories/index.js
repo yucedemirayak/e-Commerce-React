@@ -5,10 +5,12 @@ export const categoryStore = createSlice({
   initialState: [
     {
       name: undefined,
-      imgSrc: undefined,
+      imgSource: undefined,
+      details: undefined,
       subCategories: {
         name: undefined,
-        imgSrc: undefined,
+        imgSource: undefined,
+        details: undefined,
       },
     },
   ],
