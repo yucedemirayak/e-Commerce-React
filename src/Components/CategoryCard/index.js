@@ -6,14 +6,14 @@ const CategoryCard = (props) => {
   return (
     <article className={`${Styles.category_card} col-lg-4 col-md-6 card bg-dark`}>
       <img
-        src={"_imgSource"}
+        src={props.imgSource}
         className={`${Styles.img_category} ${Styles.opacity} card-img`}
         alt=""
       />
       <div className="card-img-overlay">
         <h5 className="mb-0 text-white">{props.name}</h5>
         <p className="card-text text-white"></p>
-        <div className="text-white">_details</div>
+        <div className="text-white">{props.details}</div>
         <br />
         <Link to={"./#"} className={`${Styles.btn_light} btn`}>
           Discover
