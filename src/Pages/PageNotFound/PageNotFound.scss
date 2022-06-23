@@ -1,33 +1,38 @@
-* {
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.not-found-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .figure-container {
   margin: 70px;
   padding: 100px;
-
   border: 5px solid black;
-
   background-color: rgba(255, 255, 255, 0.822);
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
-/* I. Containers */
+
 figure {
   border-radius: 50%;
-
   color: rgb(255, 255, 255);
   font-size: 6px;
   position: relative;
   width: 64em;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 figcaption {
   color: black;
@@ -35,6 +40,10 @@ figcaption {
   align-content: space-between;
   flex-wrap: wrap;
   height: 17em;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 figcaption span:before,
 .sad-mac:before {
@@ -43,6 +52,10 @@ figcaption span:before,
   width: 1em;
   height: 1em;
   transform: translate(-1em, -1em);
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 figcaption span {
   display: inline-block;
@@ -55,6 +68,10 @@ figcaption span {
   position: absolute;
   width: 0;
   height: 0;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 /* II. Sprites */
 /* 1. Sad Mac */
@@ -63,6 +80,7 @@ figcaption span {
   margin: 0 auto 7em auto;
   width: 23em;
   height: 30em;
+  
 }
 .sad-mac:before {
   box-shadow: 1em 1em, 23em 1em, 4em 3em, 5em 3em, 6em 3em, 7em 3em, 8em 3em,

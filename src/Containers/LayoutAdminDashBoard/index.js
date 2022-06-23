@@ -9,7 +9,6 @@ const LayoutAdmin = () => {
       <DHeader />
       <DSideBar/>
       <Outlet />
-
     </>
   );
 };

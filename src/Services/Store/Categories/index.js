@@ -1,15 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { _setCategory } from "./categoryActions";
 import { getCategories } from "./getCategories";
 
 export const categoryStore = createSlice({
   name: "categories",
   initialState: {
-    allCategories: []
-  }
-  ,
+    allCategories: [],
+  },
   reducers: {
-    setCategory : _setCategory,
   },
   extraReducers: {
     [getCategories.fulfilled]: (state, action) => {
@@ -21,6 +18,6 @@ export const categoryStore = createSlice({
   },
 });
 
-export const {setCategory} = categoryStore.actions;
+export const { setCategory } = categoryStore.actions;
 
 export default categoryStore.reducer;

@@ -1,7 +1,9 @@
 import React from "react";
-import "./DHeader.scss";
-import { RiMenuFill } from "react-icons/ri";
+import Styles from "./DHeader.module.scss";
+import { RiLogoutBoxRLine, RiMenuFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
+
 const MenuLogo = () => {
   return (
     <IconContext.Provider className="" value={{ size: "20px" }}>
@@ -14,26 +16,22 @@ const MenuLogo = () => {
 
 const DHeader = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar bg-gradient bg-secondary">
       <div className="container-fluid">
-      <button
-          type="button"
-          className="d-menu-btn"
-          data-bs-toggle="collapse"
-          data-bs-target="#categories-collapse"
-          aria-expanded="true"
-          aria-controls="categories-collapse"
-        >
+        <button type="button" className={Styles.menu_btn}>
           <MenuLogo id="menu-icon" />
           <img
-            alt=""
-            height="80px"
+            className={Styles.blackhole}
+            alt="blackhole"
             src="./Image/blackhole.svg"
           ></img>
         </button>
-        <a className="navbar-brand me-auto" href="./Dashboard">
+        <Link className="navbar-brand me-auto ms-2" to="./Dashboard">
           <span className="text-uppercase font-monospace">admin dashboard</span>
-        </a>
+        </Link>
+        <Link className={`${Styles.home} nav-link`} to="./">
+          <RiLogoutBoxRLine className={Styles.icon} />
+        </Link>
       </div>
     </nav>
   );

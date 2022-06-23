@@ -1,0 +1,20 @@
+.side_menu {
+  background: rgb(255, 255, 255);
+  flex: 0 0 240px;
+  max-width: 240px;
+  min-width: 240px;
+  width: 240px;
+  span {
+    color: black;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.li_icon {
+  font-size: 20px;
+}

@@ -1,0 +1,29 @@
+.menu_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+}
+
+.blackhole {
+  background-color: transparent;
+  height: 60px;
+}
+
+.home {
+  border: none;
+  background-color: transparent;
+  .icon {
+    color: whitesmoke;
+    font-size: 20px;
+  }
+}
