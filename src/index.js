@@ -4,7 +4,7 @@ import "./Assets/Styles/custom.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/js/bootstrap.min.js";
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.min.js'
 import persistStore from "redux-persist/es/persistStore";
 import store from "./Services/Store";
 import { Provider } from "react-redux";

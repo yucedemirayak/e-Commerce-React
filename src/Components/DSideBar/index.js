@@ -1,31 +1,57 @@
 import React from "react";
 import Styles from "./DSideBar.module.scss";
-import { RiListUnordered } from "react-icons/ri";
+import { RiAddCircleLine, RiAdminFill, RiCheckFill, RiListUnordered, RiStore2Line, RiUser3Line } from "react-icons/ri";
+import { BiCategoryAlt } from "react-icons/bi";
+import "antd/dist/antd.css";
+import { Menu } from "antd";
+
+function getItem(label, key, icon, children, type) {
+  return {
+    key,
+    icon,
+    children,
+    label,
+    type,
+  };
+}
+
+const items = [
+  getItem('Admins', 'sub1', <RiAdminFill/>, [
+    getItem('Create Admin', 'createAdmin' , <RiAddCircleLine/>),
+    getItem('Admin List', 'adminList' , <RiListUnordered/>),
+  ]),
+  getItem('ShopOwners', 'sub2', <RiStore2Line />, [
+    getItem('ShopOwner List', 'shopOwnerList', <RiListUnordered/>),
+    getItem('Validate ShopOwner', '51', <RiCheckFill/>),
+  ]),
+  getItem('Users', 'sub3', <RiUser3Line />, [
+    getItem('User List', '9' , <RiListUnordered/>),
+  ]),
+  getItem('Categories', 'sub4', <BiCategoryAlt />, [
+    getItem('Category List', '10' , <RiListUnordered/>),
+    getItem('Create Category', '11' , <RiAddCircleLine/>),
+    getItem('Add Sub Category', '121' , <RiAddCircleLine/>),
+  ]),
+];
 
 const DSideBar = () => {
+  const onClick = (e) => {
+    console.log('click ', e);
+  };
   return (
     <aside
-      className={`${Styles.side_menu} ant-layout-sider ant-layoutsider-dark`}
+      className={`${Styles.side_menu} ant-layout-sider ant-layout-sider-dark`}
     >
-      <div className="ant-layout-sider-children">
-        <ul className="ant-menu menu ant-menu-light ant-menu-root ant-menu-inline">
-          <li
-            className="ant-menu-submenu ant-menu-submenu-inline parent-menu ant-menu-submenu"
-            role="menuitem"
-          >
-            <div
-              class="ant-menu-submenu-title"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="sub1$Menu"
-            >
-              <RiListUnordered className={Styles.li_icon} />
-              <span className="li_span">Admins</span>
-              <i className="ant-menu-submenu-arrow"></i>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <Menu
+      onClick={onClick}
+      style={{
+        width: 256,
+      }}
+      defaultSelectedKeys={['']}
+      defaultOpenKeys={['']}
+      mode="inline"
+      items={items}
+    />
     </aside>
   );
 };
