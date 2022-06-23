@@ -6,8 +6,9 @@ function RequireAuth({ children , _userRole}) {
   const state = store.getState((state) => state);
   const authToken = state.auth.token;
   const userRole = state.auth.role;
-  if (!authToken && userRole !== _userRole) {
-    return <Navigate to="/Login" state={{ from: location }} replace />;
+  if (!authToken || userRole !== _userRole) {
+    
+    return <Navigate to="/AdminLogin" state={{ from: location }} replace />;
   }
   return children;
 }

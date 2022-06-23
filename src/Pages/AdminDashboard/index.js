@@ -1,8 +1,12 @@
 import React from "react";
+import DSideBar from "../../Components/DSideBar";
 
 const AdminDashboard = () => {
-  return <>
-  </>;
+  return (
+    <>
+      <DSideBar />
+    </>
+  );
 };
 
 export default AdminDashboard;

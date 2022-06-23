@@ -4,6 +4,7 @@ import CategoryCard from "../../Components/CategoryCard";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getCategories } from "../../Services/Store/Categories/getCategories";
+import { Empty } from "antd";
 
 const CategoryPage = () => {
   const dispatch = useDispatch();
@@ -16,9 +17,11 @@ const CategoryPage = () => {
   return (
     <section className="min-vh-100 bg-white p-5">
       <div className="row gy-3  justify-content-center">
-        {categories
-          ? categories.map((item) => <CategoryCard {...item} />)
-          : null}
+        {categories ? (
+          categories.map((item) => <CategoryCard {...item} />)
+        ) : (
+          <Empty />
+        )}
       </div>
     </section>
   );

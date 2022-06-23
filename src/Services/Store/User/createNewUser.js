@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { Post } from "../../Utils/Helpers/requestHelpers";
-import { createToken } from "../Auth/createToken";
+import { createUserToken } from "../Auth/createToken";
 
 export const createUser = createAsyncThunk(
   "Anonymous/newUser",
@@ -11,7 +11,7 @@ export const createUser = createAsyncThunk(
         email: signUpModel.email,
         password: signUpModel.password,
       };
-      dispatch(createToken(loginData));
+      dispatch(createUserToken(loginData));
     }
     return data;
   }
