@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { _logout } from "./authActions";
-import { createUserToken } from "./createToken";
+import { createAdminToken, createUserToken } from "./createToken";
 
 export const authStore = createSlice({
   name: "auth",
@@ -17,6 +17,14 @@ export const authStore = createSlice({
       state.role = action.payload.role;
     },
     [createUserToken.rejected]: (state, action) => {
+      state.token = undefined;
+      state.role = undefined;
+    },
+    [createAdminToken.fulfilled]: (state, action) => {
+      state.token = action.payload.token;
+      state.role = action.payload.role;
+    },
+    [createAdminToken.rejected]: (state, action) => {
       state.token = undefined;
       state.role = undefined;
     },

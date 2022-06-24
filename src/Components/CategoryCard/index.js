@@ -4,7 +4,9 @@ import Styles from "./CategoryCard.module.scss";
 
 const CategoryCard = (props) => {
   return (
-    <article className={`${Styles.category_card} col-lg-4 col-md-6 card bg-dark`}>
+    <article
+      className={`${Styles.category_card} col-lg-4 col-md-6 card bg-dark`}
+    >
       <img
         src={process.env.REACT_APP_FILE_URL + props.imgSource}
         className={`${Styles.img_category} ${Styles.opacity} card-img`}

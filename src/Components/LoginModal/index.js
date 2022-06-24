@@ -45,11 +45,10 @@ const LoginModal = () => {
                       placeholder="Enter a valid email address"
                     />
                     <label className="form-label" htmlFor="form3Example3">
-                      Email address
-                    </label>
                     {errors.email && touched.email ? (
-                      <small>errors.email</small>
-                    ) : null}
+                      <small>{errors.email}</small>
+                    ) : "Email Adress"}
+                    </label>
                   </div>
 
                   <div className="form-outline mb-3">
@@ -62,11 +61,11 @@ const LoginModal = () => {
                       placeholder="Enter password"
                     />
                     <label className="form-label" htmlFor="form3Example4">
-                      Password
-                    </label>
                     {errors.password && touched.password ? (
-                      <small>errors.password</small>
-                    ) : null}
+                      <small>{errors.password}</small>
+                    ) : "Password"}
+                    </label>
+
                   </div>
 
                   <div className="d-flex justify-content-between align-items-center">

@@ -1,22 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../LoginModal/LoginModal.scss";
 import { Form, Formik } from "formik";
 import { LogInModel } from "../../Services/Utils/Forms/Log-In/initialModel";
 import { LogInValidationScheme } from "../../Services/Utils/Forms/Log-In/ValidationScheme";
 import { useDispatch } from "react-redux";
-
+import { createAdminToken } from "../../Services/Store/Auth/createToken";
 
 const AdminLoginModal = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-//   const login = async (loginModel) => {
-//     await dispatch(createToken(loginModel));
-//   };
-
-const login = async (loginModel) => {
-    console.log(loginModel);
-}
+  const login = async (loginModel) => {
+    await dispatch(createAdminToken(loginModel));
+    await navigate("/Dashboard");
+  };
 
   return (
     <section className="vh-100">
@@ -26,7 +24,7 @@ const login = async (loginModel) => {
             <img
               src="https://localhost:7488/Files/Images/Login/adminlogin.jpg"
               className="img-fluid"
-              alt="sample"
+              alt="admin"
             />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -37,7 +35,7 @@ const login = async (loginModel) => {
                 login(_values);
               }}
             >
-              {({ errors, touched, handleChange, handleBlur }) => (
+              {({ errors, touched, handleChange }) => (
                 <Form>
                   <div className="form-outline mb-4">
                     <input
@@ -49,11 +47,12 @@ const login = async (loginModel) => {
                       placeholder="Enter a valid email address"
                     />
                     <label className="form-label" htmlFor="form3Example3">
-                      Email address
+                      {errors.email && touched.email ? (
+                        <small>{errors.email}</small>
+                      ) : (
+                        "Email Adress"
+                      )}
                     </label>
-                    {errors.email && touched.email ? (
-                      <small>errors.email</small>
-                    ) : null}
                   </div>
 
                   <div className="form-outline mb-3">
@@ -66,11 +65,12 @@ const login = async (loginModel) => {
                       placeholder="Enter password"
                     />
                     <label className="form-label" htmlFor="form3Example4">
-                      Password
+                      {errors.password && touched.password ? (
+                        <small>{errors.password}</small>
+                      ) : (
+                        "Password"
+                      )}
                     </label>
-                    {errors.password && touched.password ? (
-                      <small>errors.password</small>
-                    ) : null}
                   </div>
 
                   <div className="d-flex justify-content-between align-items-center">
@@ -96,7 +96,11 @@ const login = async (loginModel) => {
                     <button type="submit" className="btn btn-primary btn-lg">
                       Login
                     </button>
-                    <Link to={"/"} className="btn btn-warning btn-lg" type="button">
+                    <Link
+                      to={"/"}
+                      className="btn btn-warning btn-lg"
+                      type="button"
+                    >
                       Back to Home Page
                     </Link>
                   </div>

@@ -20,6 +20,7 @@ import AdminDashboard from "../../Pages/AdminDashboard";
 import LayoutAdmin from "../../Containers/LayoutAdminDashBoard";
 import RequireAuth from "./requireAuth";
 import AdminLogin from "../../Pages/AdminLogin";
+import { userRoles } from "../Utils/Enums/UserRoles/userRoles";
 
 const PageRoutes = () => {
   const { token } = useSelector((state) => state.auth);
@@ -51,7 +52,7 @@ const PageRoutes = () => {
             exact
             path="/Dashboard"
             element={
-              <RequireAuth _userRole={0}>
+              <RequireAuth _userRole={userRoles.ADMIN}>
                 <AdminDashboard />
               </RequireAuth>
             }

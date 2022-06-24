@@ -8,3 +8,11 @@ export const createUserToken = createAsyncThunk(
     return response.data;
   }
 );
+
+export const createAdminToken = createAsyncThunk(
+  "auth/adminLogin",
+  async (loginModel, {dispatch}) => {
+    const response = await Post("Auth/loginAdmin", loginModel);
+    return response.data;
+  }
+);
