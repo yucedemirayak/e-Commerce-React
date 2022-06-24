@@ -1,17 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../LoginModal/LoginModal.scss";
 import { Form, Formik } from "formik";
 import { LogInModel } from "../../Services/Utils/Forms/Log-In/initialModel";
 import { LogInValidationScheme } from "../../Services/Utils/Forms/Log-In/ValidationScheme";
 import { useDispatch } from "react-redux";
-import { createUserToken } from "../../Services/Store/Auth/createToken";
+import { createAdminToken } from "../../Services/Store/Auth/createToken";
 
-const LoginModal = () => {
+const AdminLoginModal = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const login = async (loginModel) => {
-    await dispatch(createUserToken(loginModel));
+    await dispatch(createAdminToken(loginModel));
+    await navigate("/Dashboard");
   };
 
   return (
@@ -20,9 +22,9 @@ const LoginModal = () => {
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-9 col-lg-6 col-xl-5">
             <img
-              src="https://localhost:7488/Files/Images/Login/login.jpg"
+              src="https://localhost:7488/Files/Images/Login/adminlogin.jpg"
               className="img-fluid"
-              alt="sample"
+              alt="admin"
             />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -33,7 +35,7 @@ const LoginModal = () => {
                 login(_values);
               }}
             >
-              {({ errors, touched, handleChange, handleBlur }) => (
+              {({ errors, touched, handleChange }) => (
                 <Form>
                   <div className="form-outline mb-4">
                     <input
@@ -45,9 +47,11 @@ const LoginModal = () => {
                       placeholder="Enter a valid email address"
                     />
                     <label className="form-label" htmlFor="form3Example3">
-                    {errors.email && touched.email ? (
-                      <small>{errors.email}</small>
-                    ) : "Email Adress"}
+                      {errors.email && touched.email ? (
+                        <small>{errors.email}</small>
+                      ) : (
+                        "Email Adress"
+                      )}
                     </label>
                   </div>
 
@@ -61,11 +65,12 @@ const LoginModal = () => {
                       placeholder="Enter password"
                     />
                     <label className="form-label" htmlFor="form3Example4">
-                    {errors.password && touched.password ? (
-                      <small>{errors.password}</small>
-                    ) : "Password"}
+                      {errors.password && touched.password ? (
+                        <small>{errors.password}</small>
+                      ) : (
+                        "Password"
+                      )}
                     </label>
-
                   </div>
 
                   <div className="d-flex justify-content-between align-items-center">
@@ -87,17 +92,17 @@ const LoginModal = () => {
                       Forgot password?
                     </a>
                   </div>
-
-                  <div className="text-center text-lg-start mt-4 pt-2">
+                  <div className="text-center text-lg-start mt-4 pt-2 d-flex justify-content-between">
                     <button type="submit" className="btn btn-primary btn-lg">
                       Login
                     </button>
-                    <p className="small fw-bold mt-2 pt-1 mb-0">
-                      Don't have an account?{" "}
-                      <Link to={"/SignUp"} className="link-danger">
-                        Register
-                      </Link>
-                    </p>
+                    <Link
+                      to={"/"}
+                      className="btn btn-warning btn-lg"
+                      type="button"
+                    >
+                      Back to Home Page
+                    </Link>
                   </div>
                 </Form>
               )}
@@ -105,28 +110,8 @@ const LoginModal = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-        <div className="text-white mb-3 mb-md-0">
-          Copyright © 2020. All rights reserved.
-        </div>
-
-        <div>
-          <a href="#!" className="text-white me-4">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="#!" className="text-white me-4">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#!" className="text-white me-4">
-            <i className="fab fa-google"></i>
-          </a>
-          <a href="#!" className="text-white">
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
     </section>
   );
 };
 
-export default LoginModal;
+export default AdminLoginModal;

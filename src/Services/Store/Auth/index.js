@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { _logout } from "./authActions";
-import { createToken } from "./createToken";
+import { createAdminToken, createUserToken } from "./createToken";
 
 export const authStore = createSlice({
   name: "auth",
@@ -12,11 +12,19 @@ export const authStore = createSlice({
     authLogOut: _logout,
   },
   extraReducers: {
-    [createToken.fulfilled]: (state, action) => {
+    [createUserToken.fulfilled]: (state, action) => {
       state.token = action.payload.token;
       state.role = action.payload.role;
     },
-    [createToken.rejected]: (state, action) => {
+    [createUserToken.rejected]: (state, action) => {
+      state.token = undefined;
+      state.role = undefined;
+    },
+    [createAdminToken.fulfilled]: (state, action) => {
+      state.token = action.payload.token;
+      state.role = action.payload.role;
+    },
+    [createAdminToken.rejected]: (state, action) => {
       state.token = undefined;
       state.role = undefined;
     },

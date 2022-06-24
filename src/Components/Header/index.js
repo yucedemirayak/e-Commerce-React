@@ -13,6 +13,7 @@ import {
 import { IconContext } from "react-icons";
 import { useDispatch } from "react-redux";
 import { authLogOut } from "../../Services/Store/Auth";
+import { userRoles } from "../../Services/Utils/Enums/UserRoles/userRoles";
 
 const CompanyLogo = () => {
   return (
@@ -26,6 +27,39 @@ const CompanyLogo = () => {
 
 const Header = () => {
   const { token } = useSelector((state) => state.auth);
+  const { role } = useSelector((state) => state.auth);
+
+  const customLink = (_userRole) => {
+    if (_userRole === userRoles.ADMIN) {
+      return "Dashboard";
+    } else if (_userRole === userRoles.SHOPOWNER) {
+      return "MyShop";
+    } else {
+      return "MyAccount";
+    }
+  };
+
+  const customLinkEL = (_userRole) => {
+    return (
+    <Link to={`/${customLink(_userRole)}`} className={`${Styles.link} nav-link`}>
+      <RiUserLine className="mx-1 mb-1" />
+      {customLink(_userRole)}
+    </Link>);
+  };
+
+  const componentCheck = (_token, _userRole) => {
+    if (!_token) {
+      return (
+        <Link to={`/Login`} className={`${Styles.link} nav-link`}>
+          <RiUserLine className="mx-1 mb-1" />
+          Login
+        </Link>
+      );
+    } else {
+      return customLinkEL(_userRole);
+    }
+  };
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const _signOut = async () => {
@@ -38,13 +72,15 @@ const Header = () => {
       <div className="container ">
         <div
           id="wrapper"
-          className=" d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+          className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
         >
           <Link
             to={"./"}
             className="d-flex align-items-center mb-2 mb-lg-0 mx-2  text-decoration-none"
           >
-            <div className={`${Styles.header_img_container} position-relative d-flex align-items-center justify-content-center`}>
+            <div
+              className={`${Styles.header_img_container} position-relative d-flex align-items-center justify-content-center`}
+            >
               <img
                 className={`${Styles.blackhole} ${Styles.rotatex}`}
                 height="180px"
@@ -75,40 +111,32 @@ const Header = () => {
               aria-label="Search"
             />
             <div className="">
-              <Link to={"./Search"} className={Styles.search_icon} id="search-btn">
+              <Link
+                to={"./Search"}
+                className={Styles.search_icon}
+                id="search-btn"
+              >
                 <RiSearchLine className="mx-2 mb-1" />
               </Link>
             </div>
           </form>
 
           <ul className="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+            <li>{componentCheck(token, role)}</li>
             <li>
-              {!token ? (
-                <Link to={"./Login"} className="nav-link">
-                  <RiUserLine className="mx-1 mb-1" />
-                  Login
-                </Link>
-              ) : (
-                <Link to={"./Dashboard"} className="nav-link">
-                  <RiUserLine className="mx-1 mb-1" />
-                  My Account
-                </Link>
-              )}
-            </li>
-            <li>
-              <Link to={"./Categories"} className="nav-link">
+              <Link to={"./Categories"} className={`${Styles.link} nav-link`}>
                 <RiUserLine className="mx-1 mb-1" />
                 Categories
               </Link>
             </li>
             <li>
-              <Link to={"./Favorites"} className="nav-link">
+              <Link to={"./Favorites"} className={`${Styles.link} nav-link`}>
                 <RiHeartLine className="mx-1 mb-1" />
                 Favorites
               </Link>
             </li>
             <li>
-              <Link to={"./Cart"} className="nav-link">
+              <Link to={"./Cart"} className={`${Styles.link} nav-link`}>
                 <RiShoppingCartLine className="mx-1 mb-1" />
                 Cart
               </Link>
@@ -127,25 +155,6 @@ const Header = () => {
               </li>
             ) : null}
           </ul>
-
-          {/* <SearchAnimation className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"/> */}
-
-          {/* //TODO: logine göre tasarım  */}
-          {/* If user not login in >>>>> */}
-
-          {/* If user loginED in >>>>>  */}
-          {/* <div class="dropdown text-end">
-          <a href="#" class="d-block link text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/mdo.png" alt="mdo" class="rounded-circle" width="32" height="32"/>
-          </a>
-          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
-        </div> */}
         </div>
       </div>
     </header>

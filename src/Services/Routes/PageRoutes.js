@@ -18,6 +18,9 @@ import CategoryPage from "../../Pages/CategoryPage";
 import { useSelector } from "react-redux";
 import AdminDashboard from "../../Pages/AdminDashboard";
 import LayoutAdmin from "../../Containers/LayoutAdminDashBoard";
+import RequireAuth from "./requireAuth";
+import AdminLogin from "../../Pages/AdminLogin";
+import { userRoles } from "../Utils/Enums/UserRoles/userRoles";
 
 const PageRoutes = () => {
   const { token } = useSelector((state) => state.auth);
@@ -45,8 +48,17 @@ const PageRoutes = () => {
           <Route path="*" element={<PageNotFound />} />
         </Route>
         <Route element={<LayoutAdmin />}>
-          <Route exact path="/Dashboard" element={<AdminDashboard />} />
+          <Route
+            exact
+            path="/Dashboard"
+            element={
+              <RequireAuth _userRole={userRoles.ADMIN}>
+                <AdminDashboard />
+              </RequireAuth>
+            }
+          />
         </Route>
+        <Route exact path="/AdminLogin" element={<AdminLogin />} />
       </Routes>
     </Router>
   );
