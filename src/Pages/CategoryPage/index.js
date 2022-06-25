@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../CategoryPage/CategoryPage.scss";
+import "../CategoryPage/categoryPage.scss";
 import CategoryCard from "../../Components/CategoryCard";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
