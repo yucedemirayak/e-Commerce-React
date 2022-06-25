@@ -1,91 +1,47 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import Styles from "./AdminList.module.scss" ;
-import { Avatar, Button, List, Skeleton } from 'antd';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAdmins } from '../../Services/Store/Admins/getAdmins';
-const count = 3;
-const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
+import React from "react";
+import "antd/dist/antd.css";
+import Styles from "./AdminList.module.scss";
+import { List } from "antd";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAdmins } from "../../Services/Store/Admins/getAdmins";
 
 const AdminList = () => {
-  const [initLoading, setInitLoading] = useState(true);
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  const [list, setList] = useState([]);
-
   const dispatch = useDispatch();
-  const adminList = useSelector(state => state.admin.list)
+  const adminList = useSelector((state) => state.admin.list);
 
-
-  useEffect( () => {
-
+  useEffect(() => {
     dispatch(getAdmins());
-    setInitLoading(false);
-    setData(adminList);
-    setList(adminList);
+  }, [dispatch]);
 
-  });
 
-  const onLoadMore = () => {
-    setLoading(true);
-    setList(
-      data.concat(
-        [...new Array(count)].map(() => ({
-          loading: true,
-          id: {},
-          fullName: {},
-          email: {},
-        })),
-      ),
-    );
-    fetch(fakeDataUrl)
-      .then((res) => res.json())
-      .then((res) => {
-        const newData = data.concat(res.results);
-        setData(newData);
-        setList(newData);
-        setLoading(false); // Resetting window's offsetTop so as to display react-virtualized demo underfloor.
-        // In real scene, you can using public method of react-virtualized:
-        // https://stackoverflow.com/questions/46700726/how-to-use-public-method-updateposition-of-react-virtualized
-
-        window.dispatchEvent(new Event('resize'));
-      });
-  };
-
-  const loadMore =
-    !initLoading && !loading ? (
-      <div
-        style={{
-          textAlign: 'center',
-          marginTop: 12,
-          height: 32,
-          lineHeight: '32px',
-        }}
-      >
-        <Button onClick={onLoadMore}>Load More</Button>
-      </div>
-    ) : null;
 
   return (
     <List
       className={Styles.demo_loadmore_list}
-      loading={initLoading}
       itemLayout="horizontal"
-      loadMore={loadMore}
-      dataSource={list}
+      dataSource={adminList}
       renderItem={(item) => (
         <List.Item
-          actions={[<a href='.' key="list-loadmore-edit">edit</a>, <a href='.' key="list-loadmore-more">more</a>]}
+          actions={[
+            <button className="btn">Edit</button>,
+            <button className="btn ">Delete</button>,
+          ]}
         >
-          <Skeleton avatar title={false} loading={item.loading} active>
-            <List.Item.Meta
-              avatar={<Avatar src={item.picture.large} />}
-              title={<a href="https://ant.design">{item.name?.last}</a>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-            />
-            <div>content</div>
-          </Skeleton>
+          <ul className="list-group w-100">
+            <li className="list-group-item">
+              <div className="ms-2 me-auto">
+                <div className="fw-bold">
+                  Full Name : <span className="fw-normal">{item.fullName}</span>
+                </div>
+                <span className="fw-bold">
+                  Email : <span className="fw-normal">{item.email}</span>
+                </span>
+                <br />
+                <small className="fw-bold">Id : {item.id}</small>
+              </div>
+            </li>
+          </ul>
         </List.Item>
       )}
     />
