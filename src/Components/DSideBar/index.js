@@ -4,6 +4,8 @@ import { RiAddCircleLine, RiAdminFill, RiCheckFill, RiListUnordered, RiStore2Lin
 import { BiCategoryAlt } from "react-icons/bi";
 import "antd/dist/antd.css";
 import { Menu } from "antd";
+import { useDispatch } from "react-redux";
+import { setComponent } from "../../Services/Store/Dashboard";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -17,8 +19,8 @@ function getItem(label, key, icon, children, type) {
 
 const items = [
   getItem('Admins', 'sub1', <RiAdminFill/>, [
-    getItem('Create Admin', 'createAdmin' , <RiAddCircleLine/>),
-    getItem('Admin List', 'adminList' , <RiListUnordered/>),
+    getItem('Create Admin', 'CreateAdminModal' , <RiAddCircleLine/>),
+    getItem('Admin List', 'AdminList' , <RiListUnordered/>),
   ]),
   getItem('ShopOwners', 'sub2', <RiStore2Line />, [
     getItem('ShopOwner List', 'shopOwnerList', <RiListUnordered/>),
@@ -35,8 +37,11 @@ const items = [
 ];
 
 const DSideBar = () => {
+  const dispatch = useDispatch();
+
   const onClick = (e) => {
-    console.log('click ', e);
+    dispatch(setComponent(e.key))
+    console.log(e);
   };
   return (
     <aside

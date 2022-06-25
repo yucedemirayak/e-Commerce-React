@@ -57,8 +57,8 @@ const PageRoutes = () => {
               </RequireAuth>
             }
           />
+          <Route exact path="/AdminLogin" element={<AdminLogin />} />
         </Route>
-        <Route exact path="/AdminLogin" element={<AdminLogin />} />
       </Routes>
     </Router>
   );

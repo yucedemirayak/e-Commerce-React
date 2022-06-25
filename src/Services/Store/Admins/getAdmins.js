@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { Get } from "../../Utils/Helpers/requestHelpers";
 
-export const getCategories = createAsyncThunk(
-  "Anonymous/allCategories",
+export const getAdmins = createAsyncThunk(
+  "Admin/getAdmins",
   async () => {
-    const response = await Get("Anonymous/allCategories");
+    const response = await Get("Admin/getAdmins");
     return response.data;
   }
 );

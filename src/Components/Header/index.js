@@ -41,10 +41,14 @@ const Header = () => {
 
   const customLinkEL = (_userRole) => {
     return (
-    <Link to={`/${customLink(_userRole)}`} className={`${Styles.link} nav-link`}>
-      <RiUserLine className="mx-1 mb-1" />
-      {customLink(_userRole)}
-    </Link>);
+      <Link
+        to={`/${customLink(_userRole)}`}
+        className={`${Styles.link} nav-link`}
+      >
+        <RiUserLine className="mx-1 mb-1" />
+        {customLink(_userRole)}
+      </Link>
+    );
   };
 
   const componentCheck = (_token, _userRole) => {
