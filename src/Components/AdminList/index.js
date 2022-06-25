@@ -15,7 +15,6 @@ const AdminList = () => {
   }, [dispatch]);
 
 
-
   return (
     <List
       className={Styles.demo_loadmore_list}
@@ -24,8 +23,8 @@ const AdminList = () => {
       renderItem={(item) => (
         <List.Item
           actions={[
-            <button className="btn">Edit</button>,
-            <button className="btn ">Delete</button>,
+            <button className="btn border border-2 border-primary">Edit</button>,
+            <button className="btn border border-2 border-danger">Delete</button>,
           ]}
         >
           <ul className="list-group w-100">
