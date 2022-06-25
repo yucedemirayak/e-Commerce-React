@@ -1,69 +1,215 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaYoutube,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
+import { IconContext } from "react-icons";
+import { FaOpencart } from "react-icons/fa";
+import Styles from "../Footer/Footer.module.scss";
+
+const CompanyLogo = () => {
+  return (
+    <IconContext.Provider value={{ size: "40px" }}>
+      <div className="text-white">
+        <FaOpencart />
+      </div>
+    </IconContext.Provider>
+  );
+};
 
 const Footer = () => {
   return (
-    
-    <footer className="py-5 bg-dark text-white container-fluid">
-      <div className="py-5 container">
-    <div className="row">
-      <div className="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul className="nav flex-column ">
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-        </ul>
-      </div>
+    <footer className="section-footer">
+    <div className="">
+      <section className="text-center text-white">
+        <div className={`${Styles.social_media_container} p-4 pb-0`}>
+          <section className="mb-4 d-flex justify-content-center">
+            <Link to={"./"} className={Styles.btn_fb}>
+              <IconContext.Provider className="" value={{ size: "30px" }}>
+                <div className="text-white ">
+                  <FaFacebookF />
+                </div>
+              </IconContext.Provider>
+            </Link>
 
-      <div className="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul className="nav flex-column">
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-        </ul>
-      </div>
+            <Link to={"./"} className={Styles.btn_tw}>
+              <IconContext.Provider className="" value={{ size: "30px" }}>
+                <div className="text-white">
+                  <FaTwitter />
+                </div>
+              </IconContext.Provider>
+            </Link>
 
-      <div className="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul className="nav flex-column">
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-        </ul>
-      </div>
+            <Link to={"./"} className={Styles.btn_insta}>
+              <IconContext.Provider className="" value={{ size: "30px" }}>
+                <div className="text-white">
+                  <FaInstagram />
+                </div>
+              </IconContext.Provider>
+            </Link>
 
-      <div className="col-md-5 offset-md-1 mb-3">
-        <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of what's new and exciting from us.</p>
-          <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
-            <button className="btn btn-primary" type="button">Subscribe</button>
-          </div>
-        </form>
-      </div>
-    </div>
+            <Link to={"./"} className={Styles.btn_youtube}>
+              <IconContext.Provider className="" value={{ size: "30px" }}>
+                <div className="text-white">
+                  <FaYoutube />
+                </div>
+              </IconContext.Provider>
+            </Link>
 
-    <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© 2022 Company, Inc. All rights reserved.</p>
-      <ul className="list-unstyled d-flex">
-        <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use link="#twitter"></use></svg></a></li>
-        <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use link="#instagram"></use></svg></a></li>
-        <li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use link="#facebook"></use></svg></a></li>
-      </ul>
-    </div>
+            <Link to={"./"} className={Styles.btn_li}>
+              <IconContext.Provider className="" value={{ size: "30px" }}>
+                <div className="text-white">
+                  <FaLinkedinIn />
+                </div>
+              </IconContext.Provider>
+            </Link>
+          </section>
+        </div>
+      </section>
+
+      <section className="footer-main py-5">
+        <div className="row">
+          <aside className="col-12 col-sm-12 col-lg-3">
+            <article className="me-lg-4">
+              <div className={`${Styles.header_img_container} position-relative d-flex align-items-center justify-content-center`}>
+                <img
+                  className={`${Styles.blackhole_footer} ${Styles.rotatex}`}
+                  height="180px"
+                  src="./image/blackhole.svg"
+                  alt=""
+                ></img>
+                <CompanyLogo className="" />
+              </div>
+              <p className="mt-3">
+                {" "}
+                © 2018- 2021 Templatemount. <br /> All rights reserved.{" "}
+              </p>
+            </article>
+          </aside>
+          <aside className="col-6 col-sm-4 col-lg-2">
+            <h6 className="title">Store</h6>
+            <ul className="list-menu">
+              <li>
+                {" "}
+                <Link to={"./"}>About us</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}>Find store</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}>Categories</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}>Blogs</Link>
+              </li>
+            </ul>
+          </aside>
+          <aside className="col-6 col-sm-4 col-lg-2">
+            <h6 className="title">Information</h6>
+            <ul className="list-menu">
+              <li>
+                {" "}
+                <Link to={"./"}>Help center</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}>Money refund</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}>Shipping info</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}>Refunds</Link>
+              </li>
+            </ul>
+          </aside>
+          <aside className="col-6 col-sm-4 col-lg-2">
+            <h6 className="title">Support</h6>
+            <ul className="list-menu">
+              <li>
+                {" "}
+                <Link to={"./"}> Help center </Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}> Documents </Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}> Account restore </Link>
+              </li>
+              <li>
+                {" "}
+                <Link to={"./"}> My Orders </Link>
+              </li>
+            </ul>
+          </aside>
+          <aside className="col-12 col-sm-12 col-lg-3">
+            <h6 className="title">Newsletter</h6>
+            <p>
+              Stay in touch with latest updates about our products and offers{" "}
+            </p>
+            <form className="mb-3">
+              {" "}
+              <div className="input-group">
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Email"
+                />
+                <button className="btn btn-light" type="submit">
+                  {" "}
+                  Join{" "}
+                </button>
+              </div>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <hr className="my-0" />
+      <section className="footer-bottom d-flex justify-content-lg-between">
+        <div>
+          <i className="fab fa-lg fa-cc-visa"></i>
+          <i className="fab fa-lg fa-cc-amex"></i>
+          <i className="fab fa-lg fa-cc-mastercard"></i>
+          <i className="fab fa-lg fa-cc-paypal"></i>
+        </div>
+        <nav className="dropup">
+          <button
+            className="dropdown-toggle btn text-white d-flex align-items-center py-0"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            <img
+              alt=""
+              src="bootstrap5-ecommerce/images/flags/flag-usa.png"
+              className="me-2"
+              height="20"
+            />
+            <span>English</span>
+          </button>
+          <ul className="dropdown-menu dropdown-menu-end">
+            <li>
+              <Link className="dropdown-item" to={"./"}>
+                Turkish
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </section>
     </div>
   </footer>
+  );
+};
 
-  )
-}
-
-export default Footer
+export default Footer;

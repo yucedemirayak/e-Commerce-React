@@ -1,19 +1,8 @@
-
-import './App.scss';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import Hero from './Components/Hero';
-
+// import './App.scss';
+import PageRoutes from "./Services/Routes/PageRoutes";
 
 function App() {
-  return (
-    <section >
-      <Header/>
-      <Hero/>
-      <Footer/>
-      
-    </section>
-  );
+  return <PageRoutes />;
 }
 
 export default App;

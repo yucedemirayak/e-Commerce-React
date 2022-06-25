@@ -1,0 +1,54 @@
+.blackhole {
+  position: absolute;
+  z-index: -1;
+}
+
+.header_img_container:hover {
+  .blackhole {
+    position: absolute;
+    transition: transform 1s ease-in-out;
+    transform: rotate(360deg);
+  }
+}
+
+.blackhole_big_container {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+
+  .blackhole-big {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+#wrapper:hover #blackhole-big {
+  transition: transform 10s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.search_icon {
+  color: black;
+}
+
+.link {
+  color: white;
+}
+
+.rotatex {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.logout {
+  background-color: transparent;
+  color: white;
+}

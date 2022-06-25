@@ -1,18 +1,18 @@
 import React from "react";
-import "./Hero.scss";
+import Styles from "../Hero/Hero.module.scss";
 
 const Hero = () => {
   return (
     <div className="d-flex align-items-center justify-content-center bg-info ">
       <div
-        id="carouselExampleDark"
-        className="carousel carousel-dark slide"
+        id="carouselExample"
+        className="carousel carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselExampleDark"
+            data-bs-target="#carouselExample"
             data-bs-slide-to="0"
             className="active"
             aria-current="true"
@@ -20,7 +20,7 @@ const Hero = () => {
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleDark"
+            data-bs-target="#carouselExample"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="2000">
             <img
-              src="./imagesForTest/pexels-photomix-company-230544.jpg"
+              src="./image/pexels-photomix-company-230544.jpg"
               className="d-block w-100"
               alt="..."
             />
@@ -42,7 +42,7 @@ const Hero = () => {
 
           <div className="carousel-item">
             <img
-              src="./imagesForTest/pexels-andrea-piacquadio-3760081.jpg"
+              src="./image/pexels-andrea-piacquadio-3760081.jpg"
               className="d-block w-100"
               alt="..."
             />
@@ -57,7 +57,7 @@ const Hero = () => {
         <button
           className="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExample"
           data-bs-slide="prev"
         >
           <span
@@ -69,7 +69,7 @@ const Hero = () => {
         <button
           className="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExample"
           data-bs-slide="next"
         >
           <span
