@@ -1,7 +1,7 @@
 import * as yup from "yup";
 import { ValidationMessages } from "../../../Enums/Validation/validationMessages";
 
-export const SingUpAdminValidationModel = yup.object().shape({
+export const SingUpAdminValidationScheme = yup.object().shape({
   fullName: yup.string().required(ValidationMessages.REQUIRED),
   email: yup
     .string()
