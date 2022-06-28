@@ -1,3 +1,8 @@
+@import "../node_modules/react-toastify/dist/ReactToastify.min.css";
+@import "../node_modules/antd/dist/antd.css";
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
 body {
   margin: 0;
   padding: 0;
@@ -12,3 +17,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+

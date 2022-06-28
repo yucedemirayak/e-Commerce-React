@@ -5,15 +5,24 @@ import { List } from "antd";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAdmins } from "../../Services/Store/Admins/getAdmins";
+import { deleteAdmin } from "../../Services/Store/Admins/deleteAdmin";
 
 const AdminList = () => {
   const dispatch = useDispatch();
   const adminList = useSelector((state) => state.admin.list);
 
+  const deleteById = async (id) => {
+    await dispatch(deleteAdmin(id));
+    await dispatch(getAdmins());
+  }
+
+  // const signUpUser = async (SignUpModel) => {
+  //   await dispatch(createUser(SignUpModel));
+  // };
+
   useEffect(() => {
     dispatch(getAdmins());
   }, [dispatch]);
-
 
 
   return (
@@ -24,8 +33,8 @@ const AdminList = () => {
       renderItem={(item) => (
         <List.Item
           actions={[
-            <button className="btn">Edit</button>,
-            <button className="btn ">Delete</button>,
+            <button id={item.id} type="button" className="btn border border-2 border-primary">Edit</button>,
+            <button id={item.id} type="button" onClick={() => {deleteById(item.id)}} className="btn border border-2 border-danger">Delete</button>,
           ]}
         >
           <ul className="list-group w-100">

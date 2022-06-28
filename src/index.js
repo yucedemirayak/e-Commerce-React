@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import "./Services/Utils/Interceptors";
 import { setupAxios } from "./Services/Utils/Interceptors";
-import { ToastContainer } from "react-bootstrap";
+import { ToastContainer } from "react-toastify";
 
 let persistor = persistStore(store);
 setupAxios(store);

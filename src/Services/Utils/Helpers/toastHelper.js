@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 
 const errorToast = (message, duration = 5000) => {
   toast(message, {
-    position: "top-right",
+    position: "top-center",
     type: "error",
     autoClose: duration,
     hideProgressBar: false,
@@ -15,7 +15,7 @@ const errorToast = (message, duration = 5000) => {
 
 const successToast = (message, duration = 5000) => {
   toast(message, {
-    position: "top-right",
+    position: "top-center",
     type: "success",
     autoClose: duration,
     hideProgressBar: false,
@@ -26,4 +26,17 @@ const successToast = (message, duration = 5000) => {
   });
 };
 
-export { errorToast, successToast };
+const warningToast = (message, duration = 5000) => {
+  toast(message, {
+    position: "top-center",
+    type: "warning",
+    autoClose: duration,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+};
+
+export { errorToast, successToast , warningToast};
